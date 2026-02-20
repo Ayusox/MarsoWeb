@@ -169,6 +169,35 @@ if ('IntersectionObserver' in window) {
     document.querySelectorAll('img').forEach(img => imageObserver.observe(img));
 }
 
+// ===== Carga diferida de videos (lazy loading) =====
+// Carga los videos solo cuando están cerca del viewport para mejorar el rendimiento inicial.
+if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                // Cuando el video es visible, cargarlo y reproducirlo
+                if (video.readyState === 0) { // Si no ha empezado a cargar
+                    video.load();
+                }
+                video.play().catch(() => {
+                    // Silenciar errores de autoplay
+                });
+            } else {
+                // Cuando el video sale del viewport, pausarlo para ahorrar recursos
+                video.pause();
+            }
+        });
+    }, {
+        rootMargin: '200px' // Empieza a cargar 200px antes de que sea visible
+    });
+
+    // Observar todos los videos con clase lazy-video
+    document.querySelectorAll('.lazy-video').forEach(video => {
+        videoObserver.observe(video);
+    });
+}
+
 // ===== Animación de entrada del hero =====
 // Asegura que el hero aparezca de forma suave al cargar la página.
 window.addEventListener('load', () => {
