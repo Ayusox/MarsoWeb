@@ -90,29 +90,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Botón "volver arriba" =====
-// Aparece cuando el usuario baja bastante.
-const scrollTopBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', () => {
-    if (scrollTopBtn) {
-        if (window.scrollY > 500) {
-            scrollTopBtn.classList.add('visible');
-        } else {
-            scrollTopBtn.classList.remove('visible');
-        }
-    }
-});
-
-// Al pulsar, sube suavemente al inicio.
-if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
+// ===== Botón de llamada =====
+// El botón de llamada está siempre visible en la esquina inferior derecha.
+// No requiere JavaScript adicional ya que funciona como enlace directo.
 
 // ===== Formulario de contacto =====
 // Evita el envío real y muestra un mensaje de confirmación.
