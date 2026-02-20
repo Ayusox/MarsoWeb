@@ -864,13 +864,18 @@ video {
     justify-content: center;
     gap: 0.55rem;
     box-shadow: 0 6px 20px rgba(10, 37, 64, 0.3);
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: var(--transition-smooth);
     z-index: 999;
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.3px;
+}
+
+.call-button.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .call-button svg {

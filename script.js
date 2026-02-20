@@ -91,8 +91,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Botón de llamada =====
-// El botón de llamada está siempre visible en la esquina inferior derecha.
-// No requiere JavaScript adicional ya que funciona como enlace directo.
+// Aparece cuando el usuario baja del hero.
+const callButton = document.getElementById('callButton');
+const heroSection = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+    if (callButton && heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        if (window.scrollY > heroHeight - 100) {
+            callButton.classList.add('visible');
+        } else {
+            callButton.classList.remove('visible');
+        }
+    }
+});
 
 // ===== Formulario de contacto =====
 // Evita el envío real y muestra un mensaje de confirmación.
