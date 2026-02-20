@@ -178,18 +178,26 @@ if ('IntersectionObserver' in window) {
             if (entry.isIntersecting) {
                 // Cuando el video es visible, cargarlo y reproducirlo
                 if (video.readyState === 0) { // Si no ha empezado a cargar
+                    // Cargar video en modo progresivo
+                    video.preload = 'metadata';
                     video.load();
                 }
-                video.play().catch(() => {
-                    // Silenciar errores de autoplay
-                });
+                // Reproducir solo cuando sea completamente visible
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // Silenciar errores de autoplay
+                    });
+                }
             } else {
-                // Cuando el video sale del viewport, pausarlo para ahorrar recursos
+                // Cuando el video sale del viewport, pausarlo y detener la carga para ahorrar datos
                 video.pause();
+                // No establecer a null, solo pausar
             }
         });
     }, {
-        rootMargin: '200px' // Empieza a cargar 200px antes de que sea visible
+        rootMargin: '300px', // Empieza a cargar 300px antes de que sea visible
+        threshold: [0, 0.25] // Detectar cuando entra y cuando está parcialmente visible
     });
 
     // Observar todos los videos con clase lazy-video
