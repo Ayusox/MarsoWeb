@@ -155,7 +155,7 @@ video {
 .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
-    background-image: url('../images/frame_video.png');
+    background-image: url('images/frame_video.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
