@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Bebidas Germán - Distribuidora mayorista de bebidas en Hinojosa del Duque, Córdoba. Cervezas, vinos, refrescos y más desde 1993.">
+    <meta name="keywords" content="distribuidora bebidas, mayorista bebidas Córdoba, Hinojosa del Duque, Los Pedroches, cervezas, vinos">
+    <meta name="author" content="Bebidas Germán">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bebidas Germán - Distribución Mayorista desde 1993">
+    <meta property="og:description" content="Tu distribuidor de confianza en Hinojosa del Duque y comarca de Los Pedroches">
+    <meta property="og:type" content="website">
+    
+    <title>Bebidas Germán | Distribución Mayorista en Hinojosa del Duque</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_marso_invert_transparent.png">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="images/logo_marso_invert_transparent.png" alt="Bebidas Germán Logo" class="nav-logo">
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#catalogo" class="nav-link">Catálogo</a>
+                <a href="#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="inicio">
+        <!-- Overlay para mejorar legibilidad del contenido -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="hero-content">
+                <!-- Logo Principal -->
+                <div data-aos="fade-down" style="margin-bottom: 2.5rem;">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Bebidas Germán" class="hero-logo" style="filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4));">
+                </div>
+                
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Desde <span class="hero-year">1993</span>, somos el referente mayorista en Hinojosa del Duque y comarca de Los Pedroches. 
+                    Calidad, variedad y servicio personalizado para tu negocio.
+                </p>
+                
+                <!-- Colaboradores -->
+                <div data-aos="fade-up" data-aos-delay="150" style="margin-bottom: 2rem;">
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; font-weight: 500;">Trabajamos con las mejores marcas</p>
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="hero-brands" style="opacity: 0.85; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));">
+                </div>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#catalogo" class="btn-primary">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                        Ver Catálogo
+                    </a>
+                    <a href="#contacto" class="btn-secondary">
+                        Solicitar Información
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== CATALOG SECTION ===== -->
+    <section class="section" id="catalogo" style="background: white;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 class="section-title" data-aos="fade-up">
+                    Nuestro Catálogo
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="margin-left: auto; margin-right: auto;">
+                    Amplia selección de bebidas para satisfacer las necesidades de tu establecimiento. 
+                    Trabajamos con las mejores marcas del mercado.
+                </p>
+            </div>
+            
+            <div class="catalog-grid">
+                <!-- Card 1: Cervezas -->
+                <div class="catalog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="position: relative; overflow: hidden;">
+                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover;">
+                            <source src="images_Catalogo/Cerveza.mp4" type="video/mp4">
+                        </video>
+                        <div class="catalog-badge">Más Vendido</div>
+                    </div>
+                    <div class="catalog-content">
+                        <h3 class="catalog-title">Cervezas</h3>
+                        <p class="catalog-description">
+                            Nacionales e importadas. Latas, botellas y barriles. 
+                            Todas las marcas líderes y cervezas artesanales de la zona.
+                        </p>
+                        <a href="#contacto" class="btn-catalog">Ver Catálogo</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Vinos -->
+                <div class="catalog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="position: relative; overflow: hidden;">
+                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: center 40%;">
+                            <source src="images_Catalogo/Vino.mp4" type="video/mp4">
+                        </video>
+                        <div class="catalog-badge" style="background: var(--color-amber);">Premium</div>
+                    </div>
+                    <div class="catalog-content">
+                        <h3 class="catalog-title">Vinos & Licores</h3>
+                        <p class="catalog-description">
+                            Selección de vinos D.O., espumosos y destilados premium. 
+                            Especialmente vinos de Montilla-Moriles y comarca.
+                        </p>
+                        <a href="#contacto" class="btn-catalog">Ver Catálogo</a>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Refrescos -->
+                <div class="catalog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="position: relative; overflow: hidden;">
+                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 45% 40%;">
+                            <source src="images_Catalogo/Refresco.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="catalog-content">
+                        <h3 class="catalog-title">Refrescos</h3>
+                        <p class="catalog-description">
+                            Coca-Cola, Pepsi, Fanta, Kas y más. Formatos PET, lata y vidrio. 
+                            Bebidas energéticas y alternativas saludables.
+                        </p>
+                        <a href="#contacto" class="btn-catalog">Ver Catálogo</a>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Aguas -->
+                <div class="catalog-card" data-aos="fade-up" data-aos-delay="400">
+                    <div style="position: relative; overflow: hidden;">
+                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 60% center;">
+                            <source src="images_Catalogo/Agua.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="catalog-content">
+                        <h3 class="catalog-title">Aguas Minerales</h3>
+                        <p class="catalog-description">
+                            Agua mineral natural y con gas. Marcas premium y económicas. 
+                            Formatos desde 33cl hasta garrafas de 5L.
+                        </p>
+                        <a href="#contacto" class="btn-catalog">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== HOW IT WORKS SECTION ===== -->
+    <section class="section" id="como-funciona" style="background: linear-gradient(135deg, rgba(10, 37, 64, 0.02) 0%, rgba(212, 175, 55, 0.02) 100%);">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 class="section-title" data-aos="fade-up">
+                    Cómo Funciona
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="margin-left: auto; margin-right: auto;">
+                    Es fácil trabajar con nosotros. Sigue estos sencillos pasos y recibe tus bebidas a domicilio.
+                </p>
+            </div>
+            
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number">1</div>
+                    <div class="process-icon">
+                        <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">Solicita Catálogo</h3>
+                    <p class="process-description">
+                        Contáctanos para obtener nuestro catálogo completo de bebidas, precios y ofertas especiales.
+                    </p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="process-arrow" style="display: flex; align-items: center; justify-content: center;" data-aos="fade-up" data-aos-delay="150">
+                    <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--color-gold);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">2</div>
+                    <div class="process-icon">
+                        <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-4-4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7a4 4 0 00-4-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">Elige Productos</h3>
+                    <p class="process-description">
+                        Selecciona los productos que necesitas. Desde cervezas hasta aguas minerales, todo disponible.
+                    </p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="process-arrow" style="display: flex; align-items: center; justify-content: center;" data-aos="fade-up" data-aos-delay="250">
+                    <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--color-gold);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-number">3</div>
+                    <div class="process-icon">
+                        <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">Realiza Pedido</h3>
+                    <p class="process-description">
+                        Confirma tu pedido con nuestro equipo. Procesamos rápidamente y con total confianza.
+                    </p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="process-arrow" style="display: flex; align-items: center; justify-content: center;" data-aos="fade-up" data-aos-delay="350">
+                    <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--color-gold);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number">4</div>
+                    <div class="process-icon">
+                        <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">Recibe a Domicilio</h3>
+                    <p class="process-description">
+                        Entrega rápida en Hinojosa del Duque y comarca. 24h de disponibilidad de servicio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== HISTORY SECTION ===== -->
+    <section class="section" id="historia" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                Sobre Nosotros
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Más de tres décadas sirviendo a la comarca de Los Pedroches con pasión y compromiso.
+            </p>
+            
+            <div class="history-content">
+                <div class="history-text" data-aos="fade-right">
+                    <h3>Arraigados en Hinojosa del Duque</h3>
+                    <p>
+                        <strong>Bebidas Germán</strong> nació en 1993 con una visión clara: ofrecer a los establecimientos 
+                        de Hinojosa del Duque y su comarca un servicio de distribución cercano, fiable y de calidad.
+                    </p>
+                    <p>
+                        Lo que comenzó como un pequeño almacén familiar se ha convertido en el distribuidor de referencia 
+                        en Los Pedroches. Conocemos cada rincón de nuestra tierra, cada cliente es parte de nuestra familia, 
+                        y cada pedido se trata con el mismo cuidado y profesionalidad que el primero.
+                    </p>
+                    <p>
+                        Hoy seguimos siendo <strong>100% locales</strong>, manteniendo nuestros valores: trato personalizado, 
+                        entregas puntuales, precios competitivos y un catálogo que se adapta a las necesidades reales 
+                        de bares, restaurantes y comercios de la zona.
+                    </p>
+                </div>
+                
+                <div class="history-highlight" data-aos="fade-left" style="position: relative;">
+                    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; z-index: -1; border-radius: 12px;">
+                        <source src="images/Compromiso.mp4" type="video/mp4">
+                    </video>
+                    <div style="position: relative; z-index: 1;">
+                        <h4>Compromiso con Los Pedroches</h4>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">
+                            Nuestra misión es simple: apoyar el comercio local con un servicio que va más allá de la distribución. 
+                            Somos parte de la comunidad.
+                        </p>
+                        
+                        <div class="history-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">30+</div>
+                                <div class="stat-label">Años de experiencia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Clientes activos</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Productos disponibles</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24h</div>
+                                <div class="stat-label">Servicio de entrega</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UBICACIÓN SECTION ===== -->
+    <section class="section" id="ubicacion" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Encuéntranos</h2>
+            
+            <div class="ubicacion-grid">
+                <!-- Left Column - Info Cards -->
+                <div class="ubicacion-info" data-aos="fade-right">
+                    <!-- Dirección -->
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-card-icon" style="background: linear-gradient(135deg, #0A2540 0%, #1A3A5C 100%);">
+                            <svg width="40" height="40" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Dirección</h3>
+                            <p>Calle Principal, 45<br>23670 Hinojosa del Duque<br>Córdoba, España</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Horarios -->
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="info-card-icon" style="background: linear-gradient(135deg, #0A2540 0%, #1A3A5C 100%);">
+                            <svg width="40" height="40" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Horarios</h3>
+                            <p>Lunes a Viernes<br>8:00 - 18:00<br>Sábados 9:00 - 14:00</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Teléfono -->
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-card-icon" style="background: linear-gradient(135deg, #0A2540 0%, #1A3A5C 100%);">
+                            <svg width="40" height="40" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <h3>Teléfono</h3>
+                            <p>+34 915 234 567<br>pedidos@bebidasgerman.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Map -->
+                <div class="ubicacion-map" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.7814256481316!2d-5.125142323459375!3d38.484252671234456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd13543920772a3d%3A0xc59a127ceb06bb87!2sBebidas%20German!5e0!3m2!1ses!2ses!4v1708425600000" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section" id="contacto" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                Contacta con Nosotros
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                ¿Tienes un bar, restaurante o comercio? Solicita presupuesto sin compromiso. 
+                Estamos aquí para ayudarte.
+            </p>
+            
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form" data-aos="fade-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" 
+                                   id="nombre" 
+                                   name="nombre" 
+                                   class="form-input" 
+                                   placeholder="Ej: Juan García" 
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   class="form-input" 
+                                   placeholder="tu@email.com" 
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" 
+                                   id="telefono" 
+                                   name="telefono" 
+                                   class="form-input" 
+                                   placeholder="Ej: 600 123 456">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea id="mensaje" 
+                                      name="mensaje" 
+                                      class="form-textarea" 
+                                      placeholder="Cuéntanos qué necesitas..."
+                                      required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left">
+                    <h3>¿Por qué Trabajar con Nosotros?</h3>
+                    
+                    <div class="info-item">
+                        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <div class="info-text">
+                            <strong>Entrega Rápida</strong>
+                            <p>Mismo día o 24h garantizado en la zona</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <div class="info-text">
+                            <strong>Garantía Total</strong>
+                            <p>Productos frescos y de máxima calidad certificada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <div class="info-text">
+                            <strong>Mejores Precios</strong>
+                            <p>Descuentos especiales por volumen y cliente fijo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <div class="info-text">
+                            <strong>Atención Personalizada</strong>
+                            <p>Asesoramiento directo y consultoría sin coste</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg class="info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3v-6"/>
+                        </svg>
+                        <div class="info-text">
+                            <strong>Amplio Catálogo</strong>
+                            <p>Más de 200 referencias de marcas reconocidas</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos" 
+                       target="_blank" 
+                       class="whatsapp-btn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <!-- Carousel Section dentro del Footer -->
+        <div class="container" style="margin-bottom: 4rem;">
+            <!-- Carousel Container -->
+            <div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Imágenes duplicadas para efecto infinito seamless -->
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Bebidas Germán</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#historia">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Condiciones de Venta</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bebidas Germán. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+        </div>
+    </footer>
+    
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+    
+    <!-- ===== AOS Library ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- ===== Custom JavaScript ===== -->
+    <script src="script.js"></script>
+</body>
+</html>
