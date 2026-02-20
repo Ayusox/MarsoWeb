@@ -53,9 +53,6 @@ if (menuToggle && navLinksContainer) {
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinksContainer.classList.toggle('active');
-
-        // Evita que la página se mueva cuando el menú está abierto
-        document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
     });
 }
 
@@ -65,7 +62,6 @@ navLinks.forEach(link => {
         if (menuToggle && navLinksContainer) {
             menuToggle.classList.remove('active');
             navLinksContainer.classList.remove('active');
-            document.body.style.overflow = '';
         }
     });
 });
@@ -75,7 +71,6 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && menuToggle && navLinksContainer) {
         menuToggle.classList.remove('active');
         navLinksContainer.classList.remove('active');
-        document.body.style.overflow = '';
     }
 });
 
