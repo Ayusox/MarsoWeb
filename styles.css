@@ -200,12 +200,13 @@ video {
 }
 
 .hero-subtitle {
-    font-size: clamp(0.95rem, 2.6vw, 1.3rem);
-    font-weight: 300;
+    font-size: clamp(0.9rem, 2.3vw, 1.15rem);
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.85);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    line-height: 1.8;
     margin-bottom: 3rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -217,7 +218,7 @@ video {
 }
 
 .hero-logo {
-    height: clamp(110px, 24vw, 200px);
+    height: clamp(140px, 28vw, 240px);
     width: auto;
     display: inline-block;
 }
@@ -273,7 +274,9 @@ video {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 2.5rem;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: white;
     font-weight: 600;
     font-size: 1rem;
@@ -282,12 +285,14 @@ video {
     text-decoration: none;
     transition: var(--transition-smooth);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.25);
     border-color: var(--color-gold);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-catalog {
