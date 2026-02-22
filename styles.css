@@ -1011,6 +1011,28 @@ video {
     
     .catalog-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .catalog-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .catalog-image {
+        height: 220px;
+    }
+    
+    .catalog-content {
+        padding: 1.5rem;
+    }
+    
+    .catalog-title {
+        font-size: 1.35rem;
+    }
+    
+    .catalog-description {
+        font-size: 0.9rem;
     }
     
     .contact-form {
@@ -1100,6 +1122,27 @@ video {
     .call-button svg {
         width: 15px;
         height: 15px;
+    }
+    
+    .catalog-image {
+        height: 180px;
+    }
+    
+    .catalog-content {
+        padding: 1.25rem;
+    }
+    
+    .catalog-title {
+        font-size: 1.2rem;
+    }
+    
+    .catalog-description {
+        font-size: 0.85rem;
+    }
+    
+    .catalog-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
     }
 }
 
