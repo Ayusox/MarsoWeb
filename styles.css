@@ -454,6 +454,8 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .history-highlight h4 {
@@ -472,13 +474,16 @@ video {
 
 .stat-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .stat-number {
     font-size: 3rem;
     font-weight: 800;
     color: white;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 0.5rem;
 }
 
@@ -486,6 +491,21 @@ video {
     font-size: 0.9rem;
     font-weight: 400;
     opacity: 0.9;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* Responsive - Small Mobile Devices */
+@media (max-width: 480px) {
+    .stat-number {
+        font-size: 2.2rem;
+        margin-bottom: 0.35rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -745,6 +765,99 @@ video {
     }
 }
 
+/* Responsive para móviles muy pequeños */
+@media (max-width: 480px) {
+    .ubicacion-grid {
+        gap: 0.75rem;
+        padding: 0 0.5rem;
+    }
+    
+    .ubicacion-info {
+        gap: 0.85rem;
+    }
+    
+    .info-card {
+        padding: 0.85rem;
+        gap: 0.75rem;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .info-card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.15rem;
+        min-width: 48px;
+        flex-shrink: 0;
+    }
+    
+    .info-card-icon svg {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .info-card-content {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .info-card-content h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .info-card-content p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .map-container {
+        min-height: 220px;
+    }
+}
+
+/* Extra pequeño - Protección ultra */
+@media (max-width: 360px) {
+    .ubicacion-grid {
+        gap: 0.6rem;
+        padding: 0 0.3rem;
+    }
+    
+    .info-card {
+        padding: 0.75rem;
+        gap: 0.7rem;
+    }
+    
+    .info-card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+        min-width: 44px;
+    }
+    
+    .info-card-icon svg {
+        width: 29px !important;
+        height: 29px !important;
+    }
+    
+    .info-card-content h3 {
+        font-size: 0.85rem;
+    }
+    
+    .info-card-content p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--color-navy);
@@ -820,6 +933,45 @@ video {
     
     .history-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .history-highlight {
+        min-height: 380px;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-highlight {
+        min-height: auto;
+        padding: 1.5rem 1rem;
+    }
+    
+    .history-highlight h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .history-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .history-highlight {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .history-highlight h4 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .history-stats {
+        gap: 0.8rem;
+        margin-top: 1rem;
     }
 }
 
