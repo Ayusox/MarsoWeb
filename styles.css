@@ -1,4 +1,4 @@
-/* ===== BEBIDAS GERMÁN - STYLESHEET ===== */
+/* ===== MARSO DISTRIBUCIONES - STYLESHEET ===== */
 /* Archivo de estilos principal para la landing page */
 
 :root {
@@ -153,10 +153,11 @@ video {
 /* ===== HERO SECTION - Editorial Style ===== */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    background-color: #1A2A3A;
     background-image: url('images/frame_video.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
     display: flex;
@@ -233,6 +234,13 @@ video {
     color: var(--color-gold);
     font-weight: 700;
     font-size: 1.2em;
+}
+
+/* Fix para hero en dispositivos móviles y tablets */
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll;
+    }
 }
 
 /* ===== BUTTONS - Premium Style ===== */

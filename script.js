@@ -1,4 +1,4 @@
-// ===== BEBIDAS GERMÁN - JAVASCRIPT =====
+// ===== MARSO DISTRIBUCIONES - JAVASCRIPT =====
 // Este archivo controla los pequeños efectos y la interacción de la web.
 
 // ===== Animaciones al hacer scroll (AOS) =====
@@ -171,16 +171,39 @@ if ('IntersectionObserver' in window) {
                 // Cuando el video es visible, cargarlo y reproducirlo
                 if (video.readyState === 0) { // Si no ha empezado a cargar
                     // Cargar video en modo progresivo
-                    video.preload = 'metadata';
+                    video.preload = 'auto';
                     video.load();
                 }
-                // Reproducir solo cuando sea completamente visible
-                const playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        // Silenciar errores de autoplay
-                    });
-                }
+                
+                // Forzar atributos necesarios para iOS
+                video.setAttribute('autoplay', '');
+                video.setAttribute('muted', '');
+                video.setAttribute('playsinline', '');
+                video.muted = true;
+                video.playsInline = true;
+                
+                // Reproducir múltiples veces para asegurar inicio en iOS
+                const attemptPlay = () => {
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            // Video reproducido exitosamente
+                        }).catch(() => {
+                            // Si falla, intentar de nuevo después de un breve delay
+                            setTimeout(() => {
+                                video.play().catch(() => {});
+                            }, 100);
+                        });
+                    }
+                };
+                
+                // Intentar reproducir inmediatamente
+                attemptPlay();
+                
+                // También intentar cuando el video tenga suficientes datos
+                video.addEventListener('loadeddata', attemptPlay, { once: true });
+                video.addEventListener('canplay', attemptPlay, { once: true });
+                
             } else {
                 // Cuando el video sale del viewport, pausarlo y detener la carga para ahorrar datos
                 video.pause();
@@ -194,9 +217,30 @@ if ('IntersectionObserver' in window) {
 
     // Observar todos los videos con clase lazy-video
     document.querySelectorAll('.lazy-video').forEach(video => {
+        // Asegurar que los videos tengan los atributos correctos desde el inicio
+        video.setAttribute('autoplay', '');
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+        video.muted = true;
+        video.playsInline = true;
+        
         videoObserver.observe(video);
     });
 }
+
+// ===== Forzar reproducción al hacer scroll o tocar la pantalla (para iOS) =====
+// iOS requiere interacción del usuario para algunos videos, este código lo maneja
+const forceVideoPlayback = () => {
+    document.querySelectorAll('.lazy-video').forEach(video => {
+        if (video.paused) {
+            video.play().catch(() => {});
+        }
+    });
+};
+
+// Ejecutar cuando el usuario interactúe con la página
+document.addEventListener('touchstart', forceVideoPlayback, { once: true, passive: true });
+document.addEventListener('scroll', forceVideoPlayback, { once: true, passive: true });
 
 // ===== Animación de entrada del hero =====
 // Asegura que el hero aparezca de forma suave al cargar la página.

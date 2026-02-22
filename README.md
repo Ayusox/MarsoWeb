@@ -1,6 +1,6 @@
-# MARSO - Bebidas & Distribución
+# Marso Distribuciones
 
-Landing page corporativa para **MARSO (Bebidas Germán)**, distribuidor mayorista de bebidas en Hinojosa del Duque (Córdoba). El proyecto está diseñado con HTML5, CSS3 y JavaScript vanilla, con enfoque en diseño premium, rendimiento y experiencia de usuario.
+Landing page corporativa para **Marso Distribuciones**, distribuidor mayorista de bebidas en Hinojosa del Duque (Córdoba). El proyecto está diseñado con HTML5, CSS3 y JavaScript vanilla, con enfoque en diseño premium, rendimiento y experiencia de usuario.
 
 ## ✨ Características
 - Diseño responsive (mobile‑first)
@@ -50,4 +50,4 @@ Abre `index.html` en tu navegador o sirve el proyecto con un servidor local.
 
 ---
 
-© 2026 Bebidas Germán. Todos los derechos reservados.
+© 2026 Marso Distribuciones. Todos los derechos reservados.
