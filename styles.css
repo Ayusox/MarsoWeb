@@ -1315,8 +1315,8 @@ video {
     }
     
     .carousel-image {
-        height: clamp(42px, 10vw, 70px);
-        max-width: clamp(140px, 50vw, 400px);
+        height: clamp(65px, 14vw, 95px);
+        max-width: clamp(200px, 65vw, 500px);
     }
     
     @keyframes scroll-carousel {
