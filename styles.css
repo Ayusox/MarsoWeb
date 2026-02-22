@@ -1029,6 +1029,10 @@ video {
     min-width: 40px;
 }
 
+.process-arrow svg {
+    transition: transform 0.3s ease;
+}
+
 /* Responsive Process Grid */
 @media (max-width: 1024px) {
     .process-grid {
@@ -1058,6 +1062,16 @@ video {
     
     .process-number {
         font-size: 1.5rem;
+    }
+    
+    .process-arrow {
+        display: flex;
+        min-width: 100%;
+        padding: 0.5rem 0;
+    }
+    
+    .process-arrow svg {
+        transform: rotate(90deg);
     }
 }
 
