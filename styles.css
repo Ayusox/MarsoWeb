@@ -667,24 +667,25 @@ video {
 .info-card {
     display: flex;
     gap: 1.5rem;
-    padding: 1.25rem;
+    padding: 1.35rem;
     background: white;
     border: 2px solid #F0F0F0;
     border-radius: var(--border-radius);
     transition: var(--transition-smooth);
     align-items: flex-start;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .info-card:hover {
-    border-color: var(--color-gold);
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
-    transform: translateY(-4px);
+    border-color: #E5E7EB;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .info-card-icon {
     width: 70px;
     height: 70px;
-    border-radius: 16px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -692,6 +693,7 @@ video {
     flex-shrink: 0;
     font-weight: 700;
     font-size: 2rem;
+    box-shadow: 0 2px 6px rgba(10, 37, 64, 0.15);
 }
 
 .info-card-content h3 {
@@ -699,13 +701,13 @@ video {
     font-weight: 700;
     color: var(--color-navy);
     margin-bottom: 0.8rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
 }
 
 .info-card-content p {
-    font-size: 0.93rem;
+    font-size: 0.94rem;
     color: #6B7280;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .ubicacion-map {
@@ -746,7 +748,7 @@ video {
     }
     
     .info-card {
-        padding: 1.2rem;
+        padding: 1.25rem;
         gap: 1.2rem;
     }
     
@@ -757,7 +759,11 @@ video {
     }
     
     .info-card-content h3 {
-        font-size: 1rem;
+        font-size: 1.05rem;
+    }
+    
+    .info-card-content p {
+        font-size: 0.92rem;
     }
     
     .map-container {
@@ -777,8 +783,8 @@ video {
     }
     
     .info-card {
-        padding: 0.85rem;
-        gap: 0.75rem;
+        padding: 0.95rem;
+        gap: 0.85rem;
         flex-direction: row;
         align-items: center;
         width: 100%;
@@ -806,8 +812,8 @@ video {
     }
     
     .info-card-content h3 {
-        font-size: 0.9rem;
-        margin-bottom: 0.25rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
         white-space: normal;
         word-break: break-word;
     }
@@ -832,8 +838,8 @@ video {
     }
     
     .info-card {
-        padding: 0.75rem;
-        gap: 0.7rem;
+        padding: 0.85rem;
+        gap: 0.75rem;
     }
     
     .info-card-icon {
@@ -849,7 +855,7 @@ video {
     }
     
     .info-card-content h3 {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
     }
     
     .info-card-content p {
