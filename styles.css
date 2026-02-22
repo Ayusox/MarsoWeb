@@ -304,6 +304,7 @@ video {
     border: 1.5px solid var(--color-navy);
     cursor: pointer;
     margin-top: 1.25rem;
+    align-self: flex-start;
 }
 
 .btn-catalog:hover {
@@ -358,6 +359,9 @@ video {
     transition: var(--transition-smooth);
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .catalog-card:hover {
@@ -378,6 +382,9 @@ video {
 
 .catalog-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .catalog-title {
@@ -392,6 +399,7 @@ video {
     color: #6B7280;
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    flex-grow: 1;
 }
 
 .catalog-badge {
