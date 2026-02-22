@@ -1020,19 +1020,19 @@ video {
     }
     
     .catalog-image {
-        height: 220px;
+        height: 200px;
     }
     
     .catalog-content {
-        padding: 1.5rem;
+        padding: 1.3rem;
     }
     
     .catalog-title {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
     }
     
     .catalog-description {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
     
     .contact-form {
@@ -1125,24 +1125,24 @@ video {
     }
     
     .catalog-image {
-        height: 180px;
+        height: 160px;
     }
     
     .catalog-content {
-        padding: 1.25rem;
+        padding: 1.1rem;
     }
     
     .catalog-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .catalog-description {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     
     .catalog-badge {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.8rem;
+        font-size: 0.68rem;
+        padding: 0.28rem 0.75rem;
     }
 }
 
