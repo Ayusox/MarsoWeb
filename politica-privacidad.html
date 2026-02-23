@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politica de Privacidad de Marso Distribuciones - Informacion sobre el tratamiento de datos personales.">
+    <meta name="keywords" content="politica de privacidad, proteccion de datos, RGPD, Marso Distribuciones">
+    <meta name="author" content="Marso Distribuciones">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Politica de Privacidad - Marso Distribuciones">
+    <meta property="og:description" content="Politica de Privacidad de Marso Distribuciones">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayusox.github.io/MarsoWeb/politica-privacidad.html">
+    
+    <title>Politica de Privacidad | Marso Distribuciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_marso_invert_transparent.png">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ===== NAVBAR CON FONDO IGUAL AL INDEX.HTML ===== */
+        #navbar {
+            background: rgba(10, 37, 64, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        #navbar.scrolled {
+            background: rgba(10, 37, 64, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+        }
+        
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #privacidad-hero {
+            animation: heroFadeIn 0.8s ease-out forwards !important;
+            opacity: 0;
+            animation-timing-function: ease-out !important;
+        }
+        
+        #privacidad-hero.loaded {
+            opacity: 1 !important;
+            animation: heroFadeIn 0.8s ease-out !important;
+        }
+        
+        .legal-page {
+            min-height: 100vh;
+            background-color: var(--color-off-white);
+        }
+        
+        #privacidad-hero {
+            background-color: #0A1620 !important;
+            background-image: 
+                linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)),
+                url('images/frame_video.png'),
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 191, 0, 0.05) 0%, transparent 50%) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            min-height: auto !important;
+            padding-top: clamp(10rem, 16vw, 14rem) !important;
+            padding-bottom: clamp(6rem, 12vw, 8rem) !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            position: relative !important;
+            margin-top: 0 !important;
+        }
+        
+        #privacidad-hero::before {
+            display: none !important;
+        }
+        
+        #privacidad-hero .hero-overlay {
+            display: none !important;
+        }
+        
+        #privacidad-hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        #privacidad-hero .hero-title {
+            font-size: clamp(2rem, 10vw, 4.5rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.5px !important;
+            color: white !important;
+            margin-bottom: 1rem !important;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        #privacidad-hero .hero-subtitle {
+            font-size: clamp(0.95rem, 2.5vw, 1.25rem) !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 0 !important;
+            max-width: 95% !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        @media (max-width: 480px) {
+            #privacidad-hero .hero-title {
+                font-size: 1.75rem !important;
+                letter-spacing: -0.25px !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            #privacidad-hero .hero-subtitle {
+                font-size: 0.9rem !important;
+                letter-spacing: 0.3px !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 640px) {
+            #privacidad-hero .hero-title {
+                font-size: 2rem !important;
+                letter-spacing: -0.35px !important;
+            }
+            
+            #privacidad-hero .hero-subtitle {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            #privacidad-hero .hero-title {
+                font-size: 2.5rem !important;
+                letter-spacing: -0.4px !important;
+            }
+            
+            #privacidad-hero .hero-subtitle {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #privacidad-hero .hero-title {
+                font-size: 3.2rem !important;
+            }
+            
+            #privacidad-hero .hero-subtitle {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            #privacidad-hero .hero-title {
+                font-size: 4rem !important;
+                text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+            }
+            
+            #privacidad-hero .hero-subtitle {
+                font-size: 1.2rem !important;
+                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+            }
+        }
+        
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 480px) {
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .legal-section {
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+            line-height: 1.8;
+        }
+        
+        .legal-section h2 {
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-gold);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h3 {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            font-weight: 600;
+            color: var(--color-navy-light);
+            margin: 1.25rem 0 0.75rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h4 {
+            font-size: clamp(0.95rem, 3vw, 1.05rem);
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin: 0.75rem 0 0.5rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section p {
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section ul {
+            margin: 1rem 0 1rem clamp(1rem, 3vw, 2rem);
+            color: var(--color-text-dark);
+            padding-left: 0;
+        }
+        
+        .legal-section ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section a:hover {
+            color: var(--color-gold);
+            border-bottom: 1px solid var(--color-gold);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .info-box strong {
+            color: var(--color-navy);
+        }
+        
+        .table-of-contents {
+            background: white;
+            border: 2px solid var(--color-gray-light);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .table-of-contents h3 {
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-top: 0;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        }
+        
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .table-of-contents li {
+            margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+        }
+        
+        .table-of-contents a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            padding: 0.25rem 0;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+        
+        .contact-legal {
+            background: white;
+            border: 2px solid var(--color-navy);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin: 2rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .contact-legal h3 {
+            margin-top: 0;
+            color: var(--color-navy);
+        }
+        
+        .contact-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-data {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .table-of-contents {
+                padding: 0.75rem;
+            }
+            
+            .contact-legal {
+                padding: 0.75rem;
+            }
+            
+            .info-box {
+                padding: 0.75rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1rem;
+            }
+            
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .update-date {
+            background: var(--color-off-white);
+            border-radius: 8px;
+            padding: clamp(0.75rem, 2vw, 1.25rem);
+            margin-top: 2rem;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: var(--color-text-dark);
+            font-style: italic;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catalogo</a>
+                <a href="index.html#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <section class="hero" id="privacidad-hero">
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; width: 100%; display: flex; align-items: center; padding: 0 clamp(1.5rem, 5vw, 4rem);">
+            <div class="hero-content" style="text-align: left; max-width: 90%; margin: 0;">
+                <h1 class="hero-title" style="text-align: left; margin-bottom: 1rem;">Politica de Privacidad</h1>
+                <p class="hero-subtitle" style="text-align: left; margin-left: 0; margin-right: auto; max-width: 90%; margin-bottom: 0;">
+                    Informacion sobre el tratamiento de datos personales de Marso Distribuciones
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="legal-page">
+        <div class="legal-content">
+            
+            <!-- Tabla de Contenidos -->
+            <div class="table-of-contents">
+                <h3>Indice de Contenidos</h3>
+                <ul>
+                    <li><a href="#responsable">1. Responsable del Tratamiento</a></li>
+                    <li><a href="#datos">2. Datos que Tratamos</a></li>
+                    <li><a href="#finalidades">3. Finalidades del Tratamiento</a></li>
+                    <li><a href="#base-legal">4. Base Legal</a></li>
+                    <li><a href="#destinatarios">5. Destinatarios de los Datos</a></li>
+                    <li><a href="#transferencias">6. Transferencias Internacionales</a></li>
+                    <li><a href="#conservacion">7. Plazos de Conservacion</a></li>
+                    <li><a href="#derechos">8. Derechos de las Personas Usuarias</a></li>
+                    <li><a href="#seguridad">9. Medidas de Seguridad</a></li>
+                    <li><a href="#menores">10. Menores de Edad</a></li>
+                    <li><a href="#cookies">11. Cookies y Tecnologias Similares</a></li>
+                    <li><a href="#cambios">12. Cambios en la Politica</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-section" id="responsable">
+                <h2>1. Responsable del Tratamiento</h2>
+                <p>
+                    El responsable del tratamiento es la persona fisica que opera bajo el nombre comercial <strong>Marso Distribuciones</strong>,
+                    actuando como empresario individual (autonomo), conforme al articulo 13 del RGPD.
+                </p>
+                <div class="contact-legal">
+                    <h3>Datos de Contacto</h3>
+                    <div class="contact-data">
+                        <div>
+                            <h4>Titular (Persona Fisica)</h4>
+                            <p><strong>[Nombre y apellidos del titular]</strong></p>
+                        </div>
+                        <div>
+                            <h4>NIF</h4>
+                            <p>[Insertar NIF del titular]</p>
+                        </div>
+                        <div>
+                            <h4>Nombre Comercial</h4>
+                            <p>Marso Distribuciones</p>
+                        </div>
+                        <div>
+                            <h4>Domicilio Social</h4>
+                            <p>Poligono Industrial A-422<br>14270 Hinojosa del Duque, Cordoba, Espana</p>
+                        </div>
+                        <div>
+                            <h4>Correo Electronico</h4>
+                            <p><a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a></p>
+                        </div>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p><a href="tel:+34635190975">+34 635 19 09 75</a></p>
+                        </div>
+                        <div>
+                            <h4>Sitio Web</h4>
+                            <p><a href="https://ayusox.github.io/MarsoWeb/">ayusox.github.io/MarsoWeb</a></p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Los datos personales se recaban con fines determinados, explicitos y legitimos, y se tratan de forma leal,
+                    transparente y limitada a lo necesario. Esta politica desarrolla la informacion exigida por el articulo 13 del RGPD
+                    y la LOPDGDD.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="datos">
+                <h2>2. Datos que Tratamos</h2>
+                <p>
+                    Tratamos los datos personales que el usuario proporciona al contactar con nosotros o al utilizar el sitio web. 
+                    En particular, podemos tratar las siguientes categorias de datos:
+                </p>
+                <ul>
+                    <li>Datos identificativos: nombre y apellidos.</li>
+                    <li>Datos de contacto: email, telefono y direccion (si se facilita).</li>
+                    <li>Datos comerciales: informacion sobre solicitudes, pedidos o consultas.</li>
+                    <li>Datos de navegacion: direccion IP, tipo de navegador, dispositivo y datos de uso (cuando aplica).</li>
+                    <li>Contenido de mensajes: informacion incluida en formularios, email o WhatsApp.</li>
+                </ul>
+                <p>
+                    No tratamos categorias especiales de datos, salvo que el usuario los incluya voluntariamente en sus mensajes.
+                </p>
+                <p>
+                    Los datos solicitados son, en general, necesarios para atender su consulta o gestionar la relacion comercial.
+                    Cuando se requieran datos obligatorios para prestar el servicio, se indicara expresamente; la negativa a facilitarlos
+                    impedira tramitar la solicitud o prestar el servicio. La aportacion de datos voluntarios permite mejorar la atencion,
+                    pero no es imprescindible para el fin principal.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="finalidades">
+                <h2>3. Finalidades del Tratamiento</h2>
+                <p>Utilizamos los datos personales para las siguientes finalidades:</p>
+                <ul>
+                    <li>Responder a consultas y solicitudes de informacion.</li>
+                    <li>Gestionar pedidos, presupuestos y relaciones comerciales.</li>
+                    <li>Prestar soporte y atencion al cliente.</li>
+                    <li>Cumplir con obligaciones legales y fiscales.</li>
+                    <li>Mejorar la calidad del servicio y la experiencia del usuario.</li>
+                </ul>
+                <p>
+                    Solo enviaremos comunicaciones comerciales si el usuario las solicita expresamente o si existe una relacion previa 
+                    conforme a la normativa aplicable.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="base-legal">
+                <h2>4. Base Legal</h2>
+                <p>
+                    El tratamiento de los datos se realiza sobre las siguientes bases legales:
+                </p>
+                <ul>
+                    <li><strong>Consentimiento:</strong> cuando el usuario envia formularios o contacta por email/WhatsApp, o solicita recibir comunicaciones.</li>
+                    <li><strong>Ejecucion de un contrato o medidas precontractuales:</strong> para gestionar pedidos, presupuestos o servicios solicitados.</li>
+                    <li><strong>Interes legitimo:</strong> para atender consultas relacionadas con la actividad y mejorar el servicio, previa ponderacion de intereses.</li>
+                    <li><strong>Obligacion legal:</strong> para cumplir normativa fiscal, contable y obligaciones en materia de proteccion de datos.</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section" id="destinatarios">
+                <h2>5. Destinatarios de los Datos</h2>
+                <p>
+                    No cedemos datos personales a terceros salvo obligacion legal o cuando sea necesario para la prestacion del servicio. 
+                    En algunos casos, podemos compartir datos con:
+                </p>
+                <ul>
+                    <li>Proveedores de servicios necesarios para la operativa (hosting, email, soporte tecnico), que actuan como encargados del tratamiento.</li>
+                    <li>Administraciones publicas cuando exista obligacion legal.</li>
+                    <li>Entidades bancarias en caso de pagos o cobros relacionados con pedidos.</li>
+                    <li>Plataformas de mensajeria utilizadas por el usuario (por ejemplo, WhatsApp), cuyos proveedores tecnologicos tratan datos conforme a sus propias politicas.</li>
+                </ul>
+                <p>
+                    Con los encargados del tratamiento se suscriben contratos conforme al articulo 28 del RGPD, garantizando que tratan los datos
+                    siguiendo instrucciones del responsable y aplican medidas de seguridad adecuadas.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="transferencias">
+                <h2>6. Transferencias Internacionales</h2>
+                <p>
+                    Con caracter general, no realizamos transferencias internacionales de datos. 
+                    Si algun proveedor tratara datos fuera del Espacio Economico Europeo, 
+                    se aplicaran las garantias adecuadas conforme a los articulos 44 y siguientes del RGPD, incluyendo decisiones de adecuacion
+                    o clausulas contractuales tipo aprobadas por la Comision Europea. El uso de servicios como WhatsApp puede implicar tratamiento
+                    de datos por proveedores con infraestructura fuera del EEE, sujeto a sus propias condiciones y garantias.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="conservacion">
+                <h2>7. Plazos de Conservacion</h2>
+                <p>
+                    Conservamos los datos personales durante el tiempo necesario para cumplir con la finalidad para la que fueron recabados 
+                    y para atender responsabilidades legales. En terminos generales:
+                </p>
+                <ul>
+                    <li>Consultas: hasta su resolucion y durante los plazos legales aplicables.</li>
+                    <li>Pedidos y facturacion: segun la normativa fiscal y contable vigente.</li>
+                    <li>Comunicaciones comerciales: hasta que el usuario solicite la baja.</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section" id="derechos">
+                <h2>8. Derechos de las Personas Usuarias</h2>
+                <p>
+                    El usuario puede ejercer los derechos de acceso, rectificacion, supresion, oposicion, limitacion del tratamiento 
+                    y portabilidad de sus datos. Para ello, puede contactar a:
+                </p>
+                <div class="info-box">
+                    📧 <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a><br>
+                    Indique el derecho que desea ejercer y aporte informacion que permita identificarle.
+                </div>
+                <p>
+                    Asimismo, puede presentar una reclamacion ante la <strong>Agencia Espanola de Proteccion de Datos (AEPD)</strong> 
+                    si considera que se han vulnerado sus derechos. Puede retirar el consentimiento en cualquier momento, sin que ello afecte
+                    a la licitud del tratamiento basado en el consentimiento previo a su retirada.
+                </p>
+                <p>
+                    No se adoptan decisiones automatizadas ni se elaboran perfiles con efectos juridicos o significativos sobre las personas usuarias.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="seguridad">
+                <h2>9. Medidas de Seguridad</h2>
+                <p>
+                    Aplicamos medidas tecnicas y organizativas apropiadas conforme al articulo 32 del RGPD, orientadas a garantizar la
+                    confidencialidad, integridad, disponibilidad y resiliencia permanentes de los sistemas y servicios de tratamiento,
+                    y a restaurar la disponibilidad y el acceso a los datos de forma diligente en caso de incidente.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="menores">
+                <h2>10. Menores de Edad</h2>
+                <p>
+                    Este sitio no esta dirigido a menores de 14 anos. Si detectamos que se han tratado datos de menores sin 
+                    autorizacion, se procederá a su eliminacion.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="cookies">
+                <h2>11. Cookies y Tecnologias Similares</h2>
+                <p>
+                    Para informacion sobre el uso de cookies, consulte nuestra <a href="politica-cookies.html"><strong>Politica de Cookies</strong></a>.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="cambios">
+                <h2>12. Cambios en la Politica</h2>
+                <p>
+                    Marso Distribuciones podra actualizar esta Politica de Privacidad para reflejar cambios legales o de servicio. 
+                    Las modificaciones se publicaran en esta misma pagina y seran efectivas desde su publicacion.
+                </p>
+            </div>
+            
+            <div class="update-date">
+                <strong>Ultima actualizacion:</strong> 23 de febrero de 2026<br>
+                <strong>Version:</strong> 1.0<br>
+                Este documento reemplaza cualquier version anterior. Se recomienda revisarlo regularmente.
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rapidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catalogo</a></li>
+                    <li><a href="index.html#historia">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Politica de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Cordoba</p>
+        </div>
+    </footer>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
