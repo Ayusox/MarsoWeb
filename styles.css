@@ -154,7 +154,7 @@ video {
 .hero {
     min-height: 100vh;
     background-color: #1A2A3A;
-    background-image: url('images/frame_video.png');
+    background-image: url('images/frame_video.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
