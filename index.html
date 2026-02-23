@@ -597,6 +597,9 @@
                     <li><a href="politica-cookies.html">Política de Cookies</a></li>
                     <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
                 </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
             </div>
         </div>
         
@@ -612,6 +615,70 @@
         </svg>
         <span>Llamar</span>
     </a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-describedby="cookieBannerDesc">
+        <div class="cookie-banner-content">
+            <p id="cookieBannerDesc">
+                Usamos cookies tecnicas necesarias para el funcionamiento del sitio. Puedes configurar tus preferencias o
+                consultar la <a href="politica-cookies.html">Politica de Cookies</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn cookie-config" id="cookieConfigure">Configurar</button>
+                <button class="cookie-btn cookie-reject" id="cookieReject">Rechazar</button>
+                <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE MODAL ===== -->
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" aria-hidden="true">
+        <div class="cookie-modal-content" role="document">
+            <div class="cookie-modal-header">
+                <h2 id="cookieModalTitle">Preferencias de cookies</h2>
+                <button class="cookie-modal-close" id="cookieClose" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p class="cookie-modal-intro">
+                Puedes aceptar o rechazar categorias no esenciales. Las cookies tecnicas son necesarias y no se pueden desactivar.
+            </p>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies tecnicas (necesarias)</strong>
+                        <p>Permiten el funcionamiento basico del sitio y la gestion de tus preferencias.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies tecnicas necesarias">
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies analiticas</strong>
+                        <p>Nos ayudan a medir el uso del sitio para mejorar el contenido y el rendimiento.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies analiticas">
+                        <input type="checkbox" id="cookieAnalytics">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de marketing</strong>
+                        <p>Permiten mostrar contenido o anuncios relevantes segun tus intereses.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies de marketing">
+                        <input type="checkbox" id="cookieMarketing">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal-actions">
+                <button class="cookie-btn cookie-secondary" id="cookieSave" type="button">Guardar preferencias</button>
+                <button class="cookie-btn cookie-accept" id="cookieAcceptAll" type="button">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
     
     <!-- ===== AOS Library ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
