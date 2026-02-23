@@ -6,10 +6,12 @@ Landing page corporativa para **Marso Distribuciones**, distribuidor mayorista d
 - Diseño responsive (mobile‑first)
 - Secciones clave: Hero, Catálogo, Cómo Funciona, Sobre Nosotros, Encuéntranos, Contacto
 - Animaciones suaves con AOS (Animate On Scroll)
-- Videos de catálogo en bucle
+- Videos de catálogo en bucle con carga diferida
+- Posters para videos (carga rápida antes de reproducir)
 - Formulario de contacto con validación básica
 - Menú móvil tipo hamburguesa
 - Carrusel infinito de marcas en el footer
+- Banner y modal de cookies con preferencias
 
 ## 🧱 Tecnologías
 - **HTML5**
@@ -26,27 +28,39 @@ MarsoWeb/
 ├── images/
 │   ├── logo_marso_invert_transparent.png
 │   ├── brands-white.png
-│   ├── frame_video.png
+│   ├── frame_video.jpg
 │   ├── Contacta.jpg
-│   └── Compromiso.mp4
+│   ├── Contacta2.jpg
+│   ├── Compromiso.mp4
+│   ├── Compromiso-poster.jpg
+│   ├── logo_redesSociales.jpg
+│   └── logo_redesSociales_og.jpg
 └── images_Catalogo/
     ├── Cerveza.mp4
     ├── Vino.mp4
     ├── Refresco.mp4
-    └── Agua.mp4
+    ├── Agua.mp4
+    ├── Cerveza-poster.jpg
+    ├── Vino-poster.jpg
+    ├── Refresco-poster.jpg
+    └── Agua-poster.jpg
 ```
 
 ## 🚀 Uso
-Abre `index.html` en tu navegador o sirve el proyecto con un servidor local.
+- Abre `index.html` en tu navegador.
+- Para una vista realista, usa un servidor local (por ejemplo, VS Code Live Server).
+- Sitio publicado: https://ayusox.github.io/MarsoWeb/
 
 ## 🛠️ Personalización rápida
 - Cambia imágenes y videos en `images/` e `images_Catalogo/`
 - Ajusta colores y espaciados en `styles.css`
 - Modifica textos en `index.html`
+- Actualiza el logo para redes en `images/logo_redesSociales_og.jpg`
 
 ## 📌 Notas
 - El formulario actualmente muestra un mensaje de confirmación y no envía datos a un servidor.
 - El número de WhatsApp es un placeholder y debe reemplazarse.
+- La vista previa en WhatsApp/Facebook puede tardar por la caché de Meta.
 
 ---
 
