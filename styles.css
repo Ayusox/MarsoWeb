@@ -643,12 +643,6 @@ video {
     box-shadow: 0 3px 10px rgba(31, 168, 85, 0.25);
 }
 
-.whatsapp-btn img {
-    width: 22px;
-    height: 22px;
-    object-fit: cover;
-    border-radius: 4px;
-}
 
 .whatsapp-btn:hover {
     background: #1C9A4C;
@@ -1086,15 +1080,9 @@ video {
     visibility: visible;
 }
 
-.call-button svg,
-.call-button img {
+.call-button svg {
     width: 19px;
     height: 19px;
-}
-
-.call-button img {
-    object-fit: cover;
-    border-radius: 4px;
 }
 
 .call-button:hover {
@@ -1116,8 +1104,7 @@ video {
         font-size: 0.85rem;
     }
     
-    .call-button svg,
-    .call-button img {
+    .call-button svg {
         width: 16px;
         height: 16px;
     }
@@ -1133,8 +1120,7 @@ video {
         gap: 0.4rem;
     }
     
-    .call-button svg,
-    .call-button img {
+    .call-button svg {
         width: 15px;
         height: 15px;
     }
