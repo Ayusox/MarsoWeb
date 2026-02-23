@@ -3,12 +3,14 @@
 
 // ===== Animaciones al hacer scroll (AOS) =====
 // Activa las animaciones de entrada cuando el usuario baja por la página.
-AOS.init({
-    duration: 800, // Duración de la animación (ms)
-    easing: 'ease-out-cubic', // Tipo de movimiento
-    once: true, // Solo anima una vez
-    offset: 100 // Distancia antes de activar la animación
-});
+if (window.AOS) {
+    AOS.init({
+        duration: 800, // Duración de la animación (ms)
+        easing: 'ease-out-cubic', // Tipo de movimiento
+        once: true, // Solo anima una vez
+        offset: 100 // Distancia antes de activar la animación
+    });
+}
 
 // ===== Barra de navegación al hacer scroll =====
 // Añade un fondo a la navbar cuando se baja un poco.
