@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Condiciones de Venta de Marso Distribuciones - Informacion contractual sobre pedidos, precios y entregas.">
+    <meta name="keywords" content="condiciones de venta, terminos de compra, Marso Distribuciones, distribucion bebidas">
+    <meta name="author" content="Marso Distribuciones">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Condiciones de Venta - Marso Distribuciones">
+    <meta property="og:description" content="Condiciones de Venta de Marso Distribuciones">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayusox.github.io/MarsoWeb/condiciones-venta.html">
+    
+    <title>Condiciones de Venta | Marso Distribuciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_marso_invert_transparent.png">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ===== NAVBAR CON FONDO IGUAL AL INDEX.HTML ===== */
+        #navbar {
+            background: rgba(10, 37, 64, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        #navbar.scrolled {
+            background: rgba(10, 37, 64, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+        }
+        
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #condiciones-hero {
+            animation: heroFadeIn 0.8s ease-out forwards !important;
+            opacity: 0;
+            animation-timing-function: ease-out !important;
+        }
+        
+        #condiciones-hero.loaded {
+            opacity: 1 !important;
+            animation: heroFadeIn 0.8s ease-out !important;
+        }
+        
+        .legal-page {
+            min-height: 100vh;
+            background-color: var(--color-off-white);
+        }
+        
+        #condiciones-hero {
+            background-color: #0A1620 !important;
+            background-image: 
+                linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)),
+                url('images/frame_video.png'),
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 191, 0, 0.05) 0%, transparent 50%) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            min-height: auto !important;
+            padding-top: clamp(10rem, 16vw, 14rem) !important;
+            padding-bottom: clamp(6rem, 12vw, 8rem) !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            position: relative !important;
+            margin-top: 0 !important;
+        }
+        
+        #condiciones-hero::before {
+            display: none !important;
+        }
+        
+        #condiciones-hero .hero-overlay {
+            display: none !important;
+        }
+        
+        #condiciones-hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        #condiciones-hero .hero-title {
+            font-size: clamp(2rem, 10vw, 4.5rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.5px !important;
+            color: white !important;
+            margin-bottom: 1rem !important;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        #condiciones-hero .hero-subtitle {
+            font-size: clamp(0.95rem, 2.5vw, 1.25rem) !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 0 !important;
+            max-width: 95% !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        @media (max-width: 480px) {
+            #condiciones-hero .hero-title {
+                font-size: 1.75rem !important;
+                letter-spacing: -0.25px !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            #condiciones-hero .hero-subtitle {
+                font-size: 0.9rem !important;
+                letter-spacing: 0.3px !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 640px) {
+            #condiciones-hero .hero-title {
+                font-size: 2rem !important;
+                letter-spacing: -0.35px !important;
+            }
+            
+            #condiciones-hero .hero-subtitle {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            #condiciones-hero .hero-title {
+                font-size: 2.5rem !important;
+                letter-spacing: -0.4px !important;
+            }
+            
+            #condiciones-hero .hero-subtitle {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #condiciones-hero .hero-title {
+                font-size: 3.2rem !important;
+            }
+            
+            #condiciones-hero .hero-subtitle {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            #condiciones-hero .hero-title {
+                font-size: 4rem !important;
+                text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+            }
+            
+            #condiciones-hero .hero-subtitle {
+                font-size: 1.2rem !important;
+                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+            }
+        }
+        
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 480px) {
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .legal-section {
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+            line-height: 1.8;
+        }
+        
+        .legal-section h2 {
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-gold);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h3 {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            font-weight: 600;
+            color: var(--color-navy-light);
+            margin: 1.25rem 0 0.75rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section p {
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section ul {
+            margin: 1rem 0 1rem clamp(1rem, 3vw, 2rem);
+            color: var(--color-text-dark);
+            padding-left: 0;
+        }
+        
+        .legal-section ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section a:hover {
+            color: var(--color-gold);
+            border-bottom: 1px solid var(--color-gold);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .info-box strong {
+            color: var(--color-navy);
+        }
+        
+        .table-of-contents {
+            background: white;
+            border: 2px solid var(--color-gray-light);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .table-of-contents h3 {
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-top: 0;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        }
+        
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .table-of-contents li {
+            margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+        }
+        
+        .table-of-contents a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            padding: 0.25rem 0;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+        
+        @media (max-width: 480px) {
+            .table-of-contents {
+                padding: 0.75rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1rem;
+            }
+            
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .update-date {
+            background: var(--color-off-white);
+            border-radius: 8px;
+            padding: clamp(0.75rem, 2vw, 1.25rem);
+            margin-top: 2rem;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: var(--color-text-dark);
+            font-style: italic;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catalogo</a>
+                <a href="index.html#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <section class="hero" id="condiciones-hero">
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; width: 100%; display: flex; align-items: center; padding: 0 clamp(1.5rem, 5vw, 4rem);">
+            <div class="hero-content" style="text-align: left; max-width: 90%; margin: 0;">
+                <h1 class="hero-title" style="text-align: left; margin-bottom: 1rem;">Condiciones de Venta</h1>
+                <p class="hero-subtitle" style="text-align: left; margin-left: 0; margin-right: auto; max-width: 90%; margin-bottom: 0;">
+                    Terminos y condiciones aplicables a pedidos, precios y entregas
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="legal-page">
+        <div class="legal-content">
+            
+            <!-- Tabla de Contenidos -->
+            <div class="table-of-contents">
+                <h3>Indice de Contenidos</h3>
+                <ul>
+                    <li><a href="#objeto">1. Objeto y ambito</a></li>
+                    <li><a href="#clientes">2. Clientes y requisitos</a></li>
+                    <li><a href="#productos">3. Productos y disponibilidad</a></li>
+                    <li><a href="#precios">4. Precios e impuestos</a></li>
+                    <li><a href="#pedidos">5. Pedidos y confirmacion</a></li>
+                    <li><a href="#pago">6. Formas de pago</a></li>
+                    <li><a href="#entrega">7. Entrega y transporte</a></li>
+                    <li><a href="#riesgo">8. Riesgo y propiedad</a></li>
+                    <li><a href="#devoluciones">9. Devoluciones y reclamaciones</a></li>
+                    <li><a href="#desistimiento">10. Derecho de desistimiento</a></li>
+                    <li><a href="#garantias">11. Garantias</a></li>
+                    <li><a href="#fuerza-mayor">12. Fuerza mayor</a></li>
+                    <li><a href="#modificaciones">13. Modificaciones</a></li>
+                    <li><a href="#jurisdiccion">14. Legislacion y jurisdiccion</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-section" id="objeto">
+                <h2>1. Objeto y ambito</h2>
+                <p>
+                    Las presentes Condiciones de Venta regulan la contratacion de productos de bebidas y servicios asociados
+                    ofrecidos por <strong>Marso Distribuciones</strong>. La realizacion de un pedido implica la aceptacion expresa
+                    de estas condiciones por parte del cliente.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="clientes">
+                <h2>2. Clientes y requisitos</h2>
+                <p>
+                    La actividad se dirige principalmente a profesionales, empresas y establecimientos de hosteleria y comercio.
+                    El cliente declara disponer de capacidad legal para contratar y, en su caso, de las licencias o permisos
+                    necesarios para la comercializacion de bebidas.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="productos">
+                <h2>3. Productos y disponibilidad</h2>
+                <p>
+                    Las caracteristicas, formatos y presentaciones se describen a titulo informativo y pueden variar segun el fabricante.
+                    La disponibilidad esta sujeta a stock. En caso de falta de disponibilidad, se informara al cliente y se podra
+                    proponer sustitucion o cancelacion sin coste.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="precios">
+                <h2>4. Precios e impuestos</h2>
+                <p>
+                    Los precios se expresan en euros e incluyen los impuestos aplicables, salvo indicacion expresa en contrario.
+                    Los gastos de transporte, si proceden, se detallaran en la oferta o confirmacion de pedido.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="pedidos">
+                <h2>5. Pedidos y confirmacion</h2>
+                <p>
+                    Los pedidos pueden realizarse por telefono, email o canales habilitados. La aceptacion del pedido quedara
+                    confirmada mediante comunicacion expresa o mediante el inicio de la preparacion y envio.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="pago">
+                <h2>6. Formas de pago</h2>
+                <p>
+                    Las formas de pago aceptadas se acordaran con el cliente y podran incluir transferencia, recibo bancario,
+                    pago a la entrega u otros medios pactados. El pago debe realizarse en los plazos acordados.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="entrega">
+                <h2>7. Entrega y transporte</h2>
+                <p>
+                    Los plazos de entrega son estimados y dependen de la disponibilidad y la ruta de reparto. El cliente debe
+                    facilitar el acceso al punto de entrega y verificar la mercancia en el momento de la recepcion.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="riesgo">
+                <h2>8. Riesgo y propiedad</h2>
+                <p>
+                    El riesgo sobre la mercancia se transmite al cliente en el momento de la entrega. La propiedad se transmitira
+                    una vez abonado el precio total, salvo pacto en contrario.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="devoluciones">
+                <h2>9. Devoluciones y reclamaciones</h2>
+                <p>
+                    Las reclamaciones por falta de conformidad, roturas o incidencias en la entrega deben comunicarse en el menor
+                    plazo posible y, en todo caso, dentro de las 48 horas siguientes a la recepcion. Se requerira evidencia documentada.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="desistimiento">
+                <h2>10. Derecho de desistimiento</h2>
+                <p>
+                    Si el cliente es consumidor final, se aplicara el derecho de desistimiento conforme a la normativa vigente,
+                    salvo las excepciones legales aplicables a productos perecederos o por razones de salud e higiene.
+                    Si el cliente actua como profesional o empresa, no resultara de aplicacion el derecho de desistimiento.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="garantias">
+                <h2>11. Garantias</h2>
+                <p>
+                    Se aplicaran las garantias legales vigentes cuando el cliente tenga la condicion de consumidor. Para clientes
+                    profesionales, se aplicara la garantia comercial y legal aplicable segun el contrato y la normativa mercantil.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="fuerza-mayor">
+                <h2>12. Fuerza mayor</h2>
+                <p>
+                    Marso Distribuciones no sera responsable por incumplimientos debidos a causas de fuerza mayor o casos fortuitos,
+                    incluyendo interrupciones de transporte, desabastecimiento, huelgas o situaciones extraordinarias.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="modificaciones">
+                <h2>13. Modificaciones</h2>
+                <p>
+                    Marso Distribuciones podra modificar estas condiciones para adaptarlas a cambios legales o comerciales. La version
+                    vigente sera la publicada en el sitio web en el momento de la contratacion.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="jurisdiccion">
+                <h2>14. Legislacion y jurisdiccion</h2>
+                <p>
+                    Estas condiciones se rigen por la legislacion espanola. En caso de controversia, las partes se someten a los
+                    juzgados y tribunales competentes conforme a la normativa aplicable.
+                </p>
+            </div>
+            
+            <div class="update-date">
+                <strong>Ultima actualizacion:</strong> 23 de febrero de 2026<br>
+                <strong>Version:</strong> 1.0<br>
+                Este documento reemplaza cualquier version anterior. Se recomienda revisarlo regularmente.
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rapidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catalogo</a></li>
+                    <li><a href="index.html#historia">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Politica de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
+            </div>
+        </div>
+```
+</attachment>
