@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviso Legal de Marso Distribuciones - Información legal y condiciones de uso de nuestro sitio web.">
+    <meta name="keywords" content="aviso legal, términos de uso, Marso Distribuciones, distribuidora bebidas">
+    <meta name="author" content="Marso Distribuciones">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aviso Legal - Marso Distribuciones">
+    <meta property="og:description" content="Aviso Legal de Marso Distribuciones">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayusox.github.io/MarsoWeb/aviso-legal.html">
+    
+    <title>Aviso Legal | Marso Distribuciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_marso_invert_transparent.png">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ===== NAVBAR CON FONDO IGUAL AL INDEX.HTML ===== */
+        #navbar {
+            background: rgba(10, 37, 64, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        /* Al hacer scroll, se mantiene igual o más opaco */
+        #navbar.scrolled {
+            background: rgba(10, 37, 64, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+        }
+        
+        /* ===== ANIMACIÓN DE INTEGRACIÓN DEL HERO ===== */
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #aviso-legal-hero {
+            animation: heroFadeIn 0.8s ease-out forwards !important;
+            opacity: 0;
+            animation-timing-function: ease-out !important;
+        }
+        
+        /* Después de cargar, la animación se carga */
+        #aviso-legal-hero.loaded {
+            opacity: 1 !important;
+            animation: heroFadeIn 0.8s ease-out !important;
+        }
+        
+        /* Estilos específicos para página legal */
+        .legal-page {
+            min-height: 100vh;
+            background-color: var(--color-off-white);
+        }
+        
+        /* Hero personalizado para aviso legal */
+        #aviso-legal-hero {
+            background-color: #0A1620 !important;
+            background-image: 
+                linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)),
+                url('images/frame_video.png'),
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 191, 0, 0.05) 0%, transparent 50%) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            min-height: auto !important;
+            padding-top: clamp(10rem, 16vw, 14rem) !important;
+            padding-bottom: clamp(6rem, 12vw, 8rem) !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            position: relative !important;
+            margin-top: 0 !important;
+        }
+        
+        #aviso-legal-hero::before {
+            display: none !important;
+        }
+        
+        #aviso-legal-hero .hero-overlay {
+            display: none !important;
+        }
+        
+        #aviso-legal-hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        /* ===== ESTILOS RESPONSIVE MEJORADOS PARA TITULO Y SUBTÍTULO DEL HERO ===== */
+        #aviso-legal-hero .hero-title {
+            font-size: clamp(2rem, 10vw, 4.5rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.5px !important;
+            color: white !important;
+            margin-bottom: 1rem !important;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        #aviso-legal-hero .hero-subtitle {
+            font-size: clamp(0.95rem, 2.5vw, 1.25rem) !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 0 !important;
+            max-width: 95% !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        /* Mobile (320px - 480px) */
+        @media (max-width: 480px) {
+            #aviso-legal-hero .hero-title {
+                font-size: 1.75rem !important;
+                letter-spacing: -0.25px !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            #aviso-legal-hero .hero-subtitle {
+                font-size: 0.9rem !important;
+                letter-spacing: 0.3px !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        /* Tablet pequeño (481px - 640px) */
+        @media (min-width: 481px) and (max-width: 640px) {
+            #aviso-legal-hero .hero-title {
+                font-size: 2rem !important;
+                letter-spacing: -0.35px !important;
+            }
+            
+            #aviso-legal-hero .hero-subtitle {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        /* Tablet (641px - 768px) */
+        @media (min-width: 641px) and (max-width: 768px) {
+            #aviso-legal-hero .hero-title {
+                font-size: 2.5rem !important;
+                letter-spacing: -0.4px !important;
+            }
+            
+            #aviso-legal-hero .hero-subtitle {
+                font-size: 1rem !important;
+            }
+        }
+        
+        /* Tablet grande (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #aviso-legal-hero .hero-title {
+                font-size: 3.2rem !important;
+            }
+            
+            #aviso-legal-hero .hero-subtitle {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        /* Desktop (1025px+) */
+        @media (min-width: 1025px) {
+            #aviso-legal-hero .hero-title {
+                font-size: 4rem !important;
+                text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+            }
+            
+            #aviso-legal-hero .hero-subtitle {
+                font-size: 1.2rem !important;
+                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+            }
+        }
+        
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 480px) {
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .legal-section {
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+            line-height: 1.8;
+        }
+        
+        .legal-section h2 {
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-gold);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h3 {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            font-weight: 600;
+            color: var(--color-navy-light);
+            margin: 1.25rem 0 0.75rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h4 {
+            font-size: clamp(0.95rem, 3vw, 1.05rem);
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin: 0.75rem 0 0.5rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section p {
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section ul {
+            margin: 1rem 0 1rem clamp(1rem, 3vw, 2rem);
+            color: var(--color-text-dark);
+            padding-left: 0;
+        }
+        
+        .legal-section ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section a:hover {
+            color: var(--color-gold);
+            border-bottom: 1px solid var(--color-gold);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .info-box strong {
+            color: var(--color-navy);
+        }
+        
+        .table-of-contents {
+            background: white;
+            border: 2px solid var(--color-gray-light);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .table-of-contents h3 {
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-top: 0;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        }
+        
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .table-of-contents li {
+            margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+        }
+        
+        .table-of-contents a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            padding: 0.25rem 0;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+        
+        .contact-legal {
+            background: white;
+            border: 2px solid var(--color-navy);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin: 2rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .contact-legal h3 {
+            margin-top: 0;
+            color: var(--color-navy);
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        }
+        
+        .contact-data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(1rem, 3vw, 1.5rem);
+            margin-top: 1.5rem;
+        }
+        
+        .contact-data div {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            min-width: 0;
+        }
+        
+        .contact-data h4 {
+            font-size: clamp(0.95rem, 3vw, 1.05rem);
+            margin: 0 0 0.5rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .contact-data p {
+            margin: 0;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            line-height: 1.5;
+        }
+        
+        .contact-data a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .contact-data a:hover {
+            color: var(--color-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-data {
+                grid-template-columns: 1fr;
+            }
+            
+            .legal-section p {
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .contact-data {
+                grid-template-columns: 1fr;
+            }
+            
+            .table-of-contents {
+                padding: 1rem;
+            }
+            
+            .contact-legal {
+                padding: 1rem;
+            }
+            
+            .info-box {
+                padding: 1rem;
+            }
+            
+            .legal-section {
+                margin-bottom: 2rem;
+            }
+            
+            .legal-section h2 {
+                margin-bottom: 0.75rem;
+            }
+            
+            .legal-section ul {
+                margin-left: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .table-of-contents {
+                padding: 0.75rem;
+            }
+            
+            .contact-legal {
+                padding: 0.75rem;
+            }
+            
+            .info-box {
+                padding: 0.75rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1rem;
+            }
+            
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .update-date {
+            background: var(--color-off-white);
+            border-radius: 8px;
+            padding: clamp(0.75rem, 2vw, 1.25rem);
+            margin-top: 2rem;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: var(--color-text-dark);
+            font-style: italic;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                <a href="index.html#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HEADER SECTION (igual que Hero en index.html) ===== -->
+    <section class="hero" id="aviso-legal-hero">
+        <!-- Overlay para mejorar legibilidad del contenido -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; width: 100%; display: flex; align-items: center; padding: 0 clamp(1.5rem, 5vw, 4rem);">
+            <div class="hero-content" style="text-align: left; max-width: 90%; margin: 0;">
+                <h1 class="hero-title" style="text-align: left; margin-bottom: 1rem;">Aviso Legal</h1>
+                <p class="hero-subtitle" style="text-align: left; margin-left: 0; margin-right: auto; max-width: 90%; margin-bottom: 0;">
+                    Términos y condiciones de uso del sitio web de Marso Distribuciones
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="legal-page">
+        <div class="legal-content">
+            
+            <!-- Tabla de Contenidos -->
+            <div class="table-of-contents">
+                <h3>Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#identificacion">1. Identificación de la Empresa</a></li>
+                    <li><a href="#normativa">2. Marco Legal Aplicable</a></li>
+                    <li><a href="#condiciones">3. Condiciones de Acceso y Uso</a></li>
+                    <li><a href="#propiedad">4. Propiedad Intelectual e Industrial</a></li>
+                    <li><a href="#responsabilidad">5. Responsabilidad por los Contenidos</a></li>
+                    <li><a href="#limitacion">6. Limitación de Responsabilidad</a></li>
+                    <li><a href="#enlaces">7. Enlaces Externos</a></li>
+                    <li><a href="#disponibilidad">8. Disponibilidad del Sitio Web</a></li>
+                    <li><a href="#privacidad">9. Protección de Datos Personales</a></li>
+                    <li><a href="#modificaciones">10. Modificaciones del Aviso Legal</a></li>
+                    <li><a href="#jurisdiccion">11. Legislación y Jurisdicción</a></li>
+                </ul>
+            </div>
+            
+            <!-- SECCIÓN 1: IDENTIFICACIÓN -->
+            <div class="legal-section" id="identificacion">
+                <h2>1. Identificación de la Empresa</h2>
+                
+                <p>
+                    Conforme a lo establecido en la Ley 34/2002, de Servicios de la Sociedad de la Información y Comercio Electrónico 
+                    (LSSI-CE), mediante el presente Aviso Legal se proporciona la identificación completa de la empresa titular y responsable 
+                    de este sitio web:
+                </p>
+                
+                <div class="contact-legal">
+                    <h3>Datos de Identificación Legal</h3>
+                    <div class="contact-data">
+                        <div>
+                            <h4>Denominación Social</h4>
+                            <p><strong>Marso Distribuciones</strong></p>
+                        </div>
+                        <div>
+                            <h4>NIF/CIF</h4>
+                            <p>[Insertar NIF/CIF del titular]</p>
+                        </div>
+                        <div>
+                            <h4>Forma Jurídica</h4>
+                            <p>Empresario Individual</p>
+                        </div>
+                        <div>
+                            <h4>Domicilio Social</h4>
+                            <p>Polígono Industrial A-422<br>14270 Hinojosa del Duque, Córdoba, España</p>
+                        </div>
+                        <div>
+                            <h4>Teléfono de Contacto</h4>
+                            <p><a href="tel:+34635190975">+34 635 19 09 75</a></p>
+                        </div>
+                        <div>
+                            <h4>Correo Electrónico</h4>
+                            <p><a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a></p>
+                        </div>
+                        <div>
+                            <h4>Sitio Web</h4>
+                            <p><a href="https://ayusox.github.io/MarsoWeb/">ayusox.github.io/MarsoWeb</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Responsable Legal</h3>
+                <p>
+                    El titular y responsable del sitio web es <strong>Marso Distribuciones</strong>, con poder de disposición y decisión 
+                    sobre todos los contenidos, servicios e información disponible en la web. Los usuarios que deseen ejercer derechos 
+                    relativos a privacidad, protección de datos u otros derechos legales podrán dirigirse a través de los canales de 
+                    contacto indicados anteriormente.
+                </p>
+                
+                <h3>Servicio de Atención al Usuario</h3>
+                <p>
+                    Para gestiones administrativas, consultas legales, quejas o sugerencias relacionadas con este Aviso Legal, el usuario 
+                    podrá contactar a través de los datos de contacto facilitados. Comprometemos a responder dentro del plazo legal establecido 
+                    en la normativa de protección de derechos del consumidor.
+                </p>
+            </div>
+            
+            <!-- SECCIÓN 2: MARCO LEGAL APLICABLE -->
+            <div class="legal-section" id="normativa">
+                <h2>2. Marco Legal Aplicable</h2>
+                
+                <h3>Normativa de Comercio Electrónico</h3>
+                <p>
+                    Este sitio web está regulado por la <strong>Ley 34/2002, de 11 de noviembre, de Servicios de la Sociedad 
+                    de la Información y de Comercio Electrónico (LSSI-CE)</strong>, que establece los requisitos que debe cumplir 
+                    cualquier prestador de servicios en línea.
+                </p>
+                
+                <h3>Protección de Datos Personales</h3>
+                <p>
+                    El tratamiento de datos personales se realiza conforme al <strong>Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, 
+                    de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales (RGPD)</strong> 
+                    y a la <strong>Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de derechos digitales (LOPDGDD)</strong>.
+                </p>
+                <p>
+                    Para información completa sobre cómo tratamos sus datos, consulte nuestra <a href="politica-privacidad.html"><strong>Política de Privacidad</strong></a>.
+                </p>
+                
+                <h3>Política de Cookies</h3>
+                <p>
+                    El uso de cookies en este sitio web se rige conforme a la <strong>Directiva 2002/58/CE</strong> sobre privacidad 
+                    electrónica y la <strong>LSSI-CE</strong>. Para detalles completos, consulte nuestra <a href="politica-cookies.html"><strong>Política de Cookies</strong></a>.
+                </p>
+                
+                <h3>Derechos de los Consumidores</h3>
+                <p>
+                    Las relaciones con consumidores se rigen por el <strong>Real Decreto Legislativo 1/2007, de 16 de noviembre, por el que se aprueba 
+                    el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios</strong> y demás normas de protección de consumidores.
+                </p>
+                
+                <h3>Propiedad Intelectual e Industrial</h3>
+                <ul>
+                    <li><strong>Real Decreto Legislativo 1/1996, de 12 de abril, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual</strong></li>
+                    <li><strong>Ley 17/2001, de 7 de diciembre, de Marcas</strong></li>
+                    <li><strong>Ley 3/1991, de 10 de enero, de Competencia Desleal</strong></li>
+                </ul>
+            </div>
+            
+            <!-- SECCIÓN 3: CONDICIONES DE ACCESO Y USO -->
+            <div class="legal-section" id="condiciones">
+                <h2>3. Condiciones de Acceso y Uso</h2>
+                
+                <h3>Acceso al Sitio Web</h3>
+                <p>
+                    El acceso a esta web es libre y gratuito. No se requiere registro previo para consultar la información 
+                    disponible. El usuario acepta todos los términos contenidos en este Aviso Legal simplemente por acceder al sitio.
+                </p>
+                
+                <h3>Uso Autorizado</h3>
+                <p>
+                    El usuario se compromete a usar este sitio web conforme a la ley y a los presentes términos. 
+                    Específicamente, el usuario se obliga a:
+                </p>
+                <ul>
+                    <li>No utilizar el sitio para actividades ilícitas o contrarias a la moral y al orden público</li>
+                    <li>No interferir con el funcionamiento normal del servidor o infraestructura</li>
+                    <li>No reproducir, distribuir, modificar o explotar comercialmente el contenido sin autorización</li>
+                    <li>No realizar ataques de denegación de servicio (DDoS) u otros ciberataques</li>
+                    <li>No ejecutar scraping, crawling agresivo u extracción masiva de datos</li>
+                    <li>No utilizar bots o programas automatizados salvo los permitidos por robots.txt</li>
+                    <li>No alojar o espiar contenido en servidores proxy</li>
+                    <li>Respetar los derechos de propiedad intelectual, marcas y confidencialidad</li>
+                </ul>
+                
+                <h3>Prohibición de Acceso</h3>
+                <p>
+                    Marso Distribuciones podrá denegar, suspender o cancelar el acceso a cualquier usuario 
+                    que viole estas condiciones, conforme a lo establecido en la legislación aplicable.
+                </p>
+                
+                <div class="info-box">
+                    <strong>⚠️ Cómo Reportar Abuso:</strong> Si detecta un abuso, acceso no autorizado o violación de seguridad, 
+                    contacte inmediatamente a <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a>
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 4: PROPIEDAD INTELECTUAL E INDUSTRIAL -->
+            <div class="legal-section" id="propiedad">
+                <h2>4. Propiedad Intelectual e Industrial</h2>
+                
+                <h3>Derechos de Autor y Contenido</h3>
+                <p>
+                    Todo el contenido de este sitio web, incluyendo pero no limitado a:
+                </p>
+                <ul>
+                    <li>Textos, artículos y descripciones de productos</li>
+                    <li>Fotografías, imágenes y gráficos</li>
+                    <li>Vídeos y contenido multimedia</li>
+                    <li>Código fuente y estructura técnica</li>
+                    <li>Esquemas de color, diseño gráfico y layout</li>
+                    <li>Compilaciones de datos y selecciones</li>
+                </ul>
+                <p>
+                    está protegido por <strong>derechos de autor (copyright)</strong> y es propiedad exclusiva de Marso Distribuciones 
+                    o está licenciado legalmente en favor de la empresa. Todos los derechos están reservados bajo la legislación de propiedad intelectual española e internacional.
+                </p>
+                
+                <h3>Marcas Registradas</h3>
+                <p>
+                    <strong>"MARSO"</strong>, <strong>"Marso Distribuciones"</strong> y los logos asociados son <strong>marcas registradas</strong> 
+                    de la empresa. Se prohíbe expresamente su uso, reproducción, imitación o registro sin autorización previa y escrita. 
+                    Cualquier uso no autorizado puede constituir violación de la Ley 17/2001 de Marcas.
+                </p>
+                
+                <h3>Licencia Limitada de Uso Personal</h3>
+                <p>
+                    El usuario recibe una licencia limitada, personal, no exclusiva y revocable para acceder y visualizar 
+                    el contenido del sitio web únicamente para propósitos personales e informativos. Esta licencia NO incluye:
+                </p>
+                <ul>
+                    <li>Derecho a descargar contenido excepto lo técnicamente necesario para visualizar</li>
+                    <li>Derecho a crear copias de seguridad a escala comercial</li>
+                    <li>Derecho a modificar, traducir o crear obras derivadas</li>
+                    <li>Derecho a publicitarse usando el contenido</li>
+                    <li>Derecho a revender el contenido</li>
+                    <li>Derecho a comprender métodos propietarios o secretos comerciales</li>
+                </ul>
+                
+                <h3>Restricciones Expresas</h3>
+                <p>Queda estrictamente prohibido sin autorización previa escrita:</p>
+                <ul>
+                    <li>Reproducir, copiar, descargar o distribuir el contenido en formato masivo</li>
+                    <li>Crear trabajos derivados, adaptaciones, traducciones o versiones modificadas</li>
+                    <li>Usar el contenido en un contexto comercial o competitivo</li>
+                    <li>Incrustar videos o imágenes en sitios web de terceros (hotlinking)</li>
+                    <li>Registrar, usar o reclamar derechos sobre las marcas de Marso Distribuciones</li>
+                    <li>Realizar actividades de competencia desleal</li>
+                </ul>
+                
+                <h3>Licencias de Terceros</h3>
+                <p>
+                    Este sitio utiliza tecnologías y recursos de terceros bajo licencias específicas:
+                </p>
+                <ul>
+                    <li><strong>Tailwind CSS</strong> - Licencia MIT</li>
+                    <li><strong>Montserrat Font (Google Fonts)</strong> - Licencia Open Font License</li>
+                    <li><strong>AOS (Animate On Scroll)</strong> - Licencia MIT</li>
+                    <li><strong>Google Maps</strong> - Según los Términos de Servicio de Google</li>
+                </ul>
+                
+                <h3>Contacto para Permisos de Uso</h3>
+                <p>
+                    Si desea reutilizar, licenciar o solicitar permiso para usar contenido de este sitio web 
+                    en contextos no contemplados por esta licencia personal, contacte a:
+                </p>
+                <div class="info-box">
+                    📧 <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a><br>
+                    Especifique el contenido que desea reutilizar y el propósito previsto.
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 5: RESPONSABILIDAD POR LOS CONTENIDOS -->
+            <div class="legal-section" id="responsabilidad">
+                <h2>5. Responsabilidad por los Contenidos</h2>
+                
+                <h3>Exactitud e Integridad de la Información</h3>
+                <p>
+                    Marso Distribuciones realiza esfuerzos razonables para mantener la información del sitio actualizada, 
+                    precisa y completa. Sin embargo, NO garantiza ni asume responsabilidad por:
+                </p>
+                <ul>
+                    <li>Precisión, integridad o actualización de contenidos</li>
+                    <li>Errores tipográficos, incorrecciones o información obsoleta</li>
+                    <li>Omisiones o contenido incompleto</li>
+                    <li>Cambios en precios, disponibilidad o especificaciones de productos</li>
+                    <li>Stock disponible en tiempo real</li>
+                    <li>Información de terceros en la web</li>
+                </ul>
+                
+                <h3>Información sobre Productos</h3>
+                <p>
+                    Las descripciones, características, precios e imágenes de productos en el catálogo son meramente orientativas. 
+                    Para información técnica exacta, especificaciones completas, alérgenos, composición o normativas específicas 
+                    aplicables a su comunidad autónoma, debe:
+                </p>
+                <ul>
+                    <li>Solicitar fichas técnicas o info nutricional a nuestro equipo</li>
+                    <li>Verificar etiquetas del fabricante en el producto final</li>
+                    <li>Consultar regulaciones locales específicas para distribución</li>
+                    <li>Contactar con nuestro equipo comercial para confirmaciones</li>
+                </ul>
+                
+                <h3>Responsabilidad del Usuario</h3>
+                <p>
+                    El usuario es responsable de:
+                </p>
+                <ul>
+                    <li>Verificar toda la información antes de tomar decisiones comerciales o de compra</li>
+                    <li>Solicitar confirmaciones específicas sobre aspectos críticos (precios finales, stock, entrega)</li>
+                    <li>Cumplir con requisitos legales en su jurisdicción para la distribución de productos</li>
+                    <li>Verificar legalidad y restricciones sobre la venta de bebidas alcohólicas en su zona</li>
+                </ul>
+                
+                <h3>Información de Terceros y Redes Sociales</h3>
+                <p>
+                    Marso Distribuciones no es responsable por:
+                </p>
+                <ul>
+                    <li>Contenidos publicados por usuarios, clientes o terceros en redes sociales vinculadas</li>
+                    <li>Comentarios, reseñas o valoraciones publicadas en terceros sitios</li>
+                    <li>Información proporcionada en mensajes de WhatsApp, email o contacto directo que sea errónea</li>
+                    <li>Acuerdos verbales o promesas realizadas por personal de la empresa que no constan por escrito</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>💡 Recomendación:</strong> Para transacciones importantes, solicite siempre confirmación por escrito 
+                    (email) de precios, términos y condiciones.
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 6: LIMITACIÓN DE RESPONSABILIDAD -->
+            <div class="legal-section" id="limitacion">
+                <h2>6. Limitación de Responsabilidad</h2>
+                
+                <h3>Exención de Responsabilidad</h3>
+                <p>
+                    En la máxima medida permitida por la legislación española, Marso Distribuciones NO será responsable por ningún daño, 
+                    perjuicio o cuantía resultante de:
+                </p>
+                <ul>
+                    <li>Dificultades para acceder al sitio web o interrupciones del servicio</li>
+                    <li>Pérdida de datos, archivos, información o ingresos</li>
+                    <li>Virus, malware, código malicioso o ataques cibernéticos que afecten dispositivos del usuario</li>
+                    <li>Errores, omisiones u obsolescencia del contenido</li>
+                    <li>Incapacidad de usar funcionalidades específicas</li>
+                    <li>Daños indirectos, especiales, derivados o consecuentes</li>
+                    <li>Pérdida de beneficios, oportunidades comerciales o clientela</li>
+                    <li>Daños punitivos o ejemplares</li>
+                    <li>Cambios en políticas de distribución de bebidas en su zona</li>
+                    <li>Retrasos en entregas sin responsabilidad contractual escrita</li>
+                </ul>
+                
+                <h3>Límite de Responsabilidad</h3>
+                <p>
+                    De conformidad con lo permitido por la legislación española, en particular el artículo 1604 del Código Civil, 
+                    Marso Distribuciones podrá limitar su responsabilidad en relaciones comerciales entre empresarios, 
+                    siempre respetando los derechos irrenunciables de los consumidores establecidos en el Real Decreto Legislativo 1/2007.
+                </p>
+                
+                <h3>Excepciones (Casos donde NO aplica la limitación)</h3>
+                <p>
+                    Estas limitaciones de responsabilidad NO aplican en caso de:
+                </p>
+                <ul>
+                    <li>Muerte o lesiones corporales causadas por negligencia o dolo</li>
+                    <li>Fraude deliberado o tergiversación intencional</li>
+                    <li>Violación grave de derechos de privacidad o protección de datos</li>
+                    <li>Incumplimiento grave de leyes sobre defensa de consumidores</li>
+                    <li>Violación de derechos fundamentales del usuario</li>
+                    <li>Responsabilidad contractual por servicios pagados específicamente</li>
+                    <li>Casos donde la ley española prohíbe limitar responsabilidad</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>⚠️ Importante:</strong> Esta limitación se aplica incluso si Marso Distribuciones ha sido 
+                    informada de la posibilidad de tales daños.
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 7: ENLACES EXTERNOS -->
+            <div class="legal-section" id="enlaces">
+                <h2>7. Enlaces Externos</h2>
+                
+                <h3>Política sobre Enlaces a Terceros</h3>
+                <p>
+                    Este sitio web puede contener enlaces a sitios webs externos, incluyendo plataformas de redes sociales 
+                    (Facebook, Instagram, WhatsApp, etc.), Google Maps, proveedores, etc. Estos enlaces se proporcionan 
+                    únicamente para conveniencia y referencia del usuario.
+                </p>
+                
+                <h3>No Respaldamos Contenidos de Terceros</h3>
+                <p>
+                    Marso Distribuciones NO respalda, verifica ni asume responsabilidad por:
+                </p>
+                <ul>
+                    <li>Contenidos, servicios o productos disponibles en sitios externos</li>
+                    <li>Exactitud, integridad o legalidad de información en sitios vinculados</li>
+                    <li>Disponibilidad técnica, accesibilidad o funcionamiento de esos sitios</li>
+                    <li>Políticas de privacidad, términos de uso o practicas comerciales de terceros</li>
+                    <li>Virus, malware, problemas de seguridad en sitios externos</li>
+                    <li>Publicidad, contenido inapropiado o violaciones de derechos en esos sitios</li>
+                </ul>
+                
+                <h3>Enlaces a Redes Sociales</h3>
+                <p>
+                    Los enlaces a plataformas como WhatsApp, Facebook, Instagram o LinkedIn están sujetos a:
+                </p>
+                <ul>
+                    <li>Términos de Servicio de esas plataformas (no controlados por Marso Distribuciones)</li>
+                    <li>Políticas de privacidad de dichas plataformas</li>
+                    <li>Contenidos publicados por otros usuarios no moderados por nosotros</li>
+                </ul>
+                <p>
+                    Marso Distribuciones no es responsable por contenidos publicados por terceros en redes sociales, 
+                    incluso si están en perfiles o canales asociados a la empresa.
+                </p>
+                
+                <h3>Su Responsabilidad al Seguir Enlaces</h3>
+                <p>
+                    El usuario asume el riesgo completo al seguir enlaces externos. Se recomienda:
+                </p>
+                <ul>
+                    <li>Verificar la URL antes de hacer clic (vigilar phishing)</li>
+                    <li>Revisar la política de privacidad del sitio destino</li>
+                    <li>Ser cauteloso con solicitudes de información personal o crediticia</li>
+                    <li>Reportar inmediatamente cualquier sitio fraudulento o malicioso</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>🔒 Si detecta suplantación:</strong> Contacte a <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a> 
+                    inmediatamente si encuentra sitios que suplanten a Marso Distribuciones.
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 8: DISPONIBILIDAD DEL SITIO WEB -->
+            <div class="legal-section" id="disponibilidad">
+                <h2>8. Disponibilidad del Sitio Web</h2>
+                
+                <h3>Disponibilidad No Garantizada</h3>
+                <p>
+                    Aunque Marso Distribuciones realiza esfuerzos razonables para mantener el sitio disponible 24/7, 
+                    se proporciona "TAL CUAL" sin garantías. NO se garantiza:
+                </p>
+                <ul>
+                    <li>Acceso continuo, ininterrumpido, sin defectos o errores</li>
+                    <li>Velocidad de carga específica o rendimiento particular</li>
+                    <li>Compatibilidad con todos los navegadores, dispositivos o sistemas operativos</li>
+                    <li>Disponibilidad permanente de enlaces, imágenes o contenido multimedia</li>
+                    <li>Accesibilidad según estándares WCAG u otros estándares de accesibilidad</li>
+                </ul>
+                
+                <h3>Mantenimiento y Caídas</h3>
+                <p>
+                    Marso Distribuciones puede realizar mantenimiento preventivo, actualizaciones de seguridad, 
+                    cambios estructurales o mejoras técnicas sin aviso previo. Durante estos períodos, el sitio 
+                    puede estar parcial o totalmente inaccesible.
+                </p>
+                
+                <h3>Factores Externos</h3>
+                <p>
+                    El usuario puede experimentar problemas de acceso debidos a factores fuera de nuestro control:
+                </p>
+                <ul>
+                    <li>Conexión a Internet del usuario (velocidad, estabilidad, latencia)</li>
+                    <li>Infraestructura de ISP (Proveedor de Servicios de Internet)</li>
+                    <li>Configuración de firewall, proxy o filtros del usuario</li>
+                    <li>Limitaciones del navegador o navegadores no compatibles</li>
+                    <li>Ataques DDoS o ciberataques contra la infraestructura de Marso</li>
+                    <li>Fallos en servicios extenos (Google Maps, CDN, proveedores hosting)</li>
+                </ul>
+                
+                <h3>Responsabilidad del Usuario</h3>
+                <p>
+                    El usuario es responsable de:
+                </p>
+                <ul>
+                    <li>Proporcionar y mantener una conexión a Internet funcional</li>
+                    <li>Utilizar navegadores modernos y actualizados (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Tener configuración de seguridad adecuada que no bloquee contenido legítimo</li>
+                    <li>Salvar copias de cualquier información importante que publique o compartir con nosotros</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>📞 Reportar problemas técnicos:</strong> Si el sitio web no está disponible de forma 
+                    prolongada, contacte a <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a>
+                </div>
+            </div>
+            
+            <!-- SECCIÓN 9: PROTECCIÓN DE DATOS PERSONALES -->
+            <div class="legal-section" id="privacidad">
+                <h2>9. Protección de Datos Personales</h2>
+                
+                <h3>Responsable del Tratamiento</h3>
+                <p>
+                    <strong>Marso Distribuciones</strong> es el responsable del tratamiento de datos personales conforme al 
+                    Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).
+                </p>
+                
+                <h3>Información Completa</h3>
+                <p>
+                    Para conocer la política completa de privacidad, los fines del tratamiento, tus derechos 
+                    como titular de datos, plazos de conservación y demás información obligatoria conforme al artículo 13 del RGPD, 
+                    consulta nuestra <a href="politica-privacidad.html"><strong>Política de Privacidad</strong></a>.
+                </p>
+                
+                <h3>Ejercicio de Derechos</h3>
+                <p>
+                    Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición 
+                    contactando a través de:
+                </p>
+                <div class="info-box">
+                    📧 <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a><br>
+                    Indica el derecho que deseas ejercer y proporciona información que permita identificarte
+                </div>
+                
+                <p>
+                    También puedes presentar reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> 
+                    si consideras que se han vulnerado tus derechos.
+                </p>
+            </div>
+            
+            <!-- SECCIÓN 10: MODIFICACIONES DEL AVISO LEGAL -->
+            <div class="legal-section" id="modificaciones">
+                <h2>10. Modificaciones del Aviso Legal</h2>
+                
+                <h3>Derecho a Modificar</h3>
+                <p>
+                    Marso Distribuciones podrá modificar, actualizar, mejorar o cambiar cualquier aspecto de este Aviso Legal 
+                    en cualquier momento. Los cambios entrarán en vigor desde su publicación en el sitio web.
+                </p>
+                
+                <h3>Cambios al Sitio Web</h3>
+                <p>
+                    También puede modificar sin previo aviso:
+                </p>
+                <ul>
+                    <li>Diseño visual, estructura y funcionamiento del sitio</li>
+                    <li>Contenidos, catálogos y descripción de productos</li>
+                    <li>Funcionalidades, herramientas y servicios disponibles</li>
+                    <li>Políticas de acceso y restricciones</li>
+                    <li>Términos de contacto y servicio al cliente</li>
+                </ul>
+                
+                <h3>Cómo Notificamos Cambios Importantes</h3>
+                <p>
+                    Para cambios <strong>sustanciales</strong> que afecten derechos y obligaciones del usuario, 
+                    Marso Distribuciones publicará notificación:
+                </p>
+                <ul>
+                    <li>En banner destacado en la página principal</li>
+                    <li>En correo electrónico al registrado en contactos (si aplica)</li>
+                    <li>En la fecha de "Última Actualización" de este documento</li>
+                    <li>Mediante comunicación telefónica para clientes comerciales importantes</li>
+                </ul>
+                
+                <h3>Vigencia de Cambios</h3>
+                <p>
+                    Los cambios a este Aviso Legal vigarán a partir de su publicación en el sitio web. 
+                    El uso continuado del sitio tras la publicación significa aceptación de los nuevos términos.
+                </p>
+                
+                <h3>Recomendación de Revisión</h3>
+                <p>
+                    Se recomienda la revisión periódica de este Aviso Legal, especialmente antes de realizar 
+                    transacciones comerciales importantes.
+                </p>
+            </div>
+            
+            <!-- SECCIÓN 11: LEGISLACIÓN Y JURISDICCIÓN -->
+            <div class="legal-section" id="jurisdiccion">
+                <h2>11. Legislación y Jurisdicción</h2>
+                
+                <h3>Ley Aplicable</h3>
+                <p>
+                    Este Aviso Legal y todas las relaciones derivadas del uso de este sitio web se regirán e interpretarán 
+                    conforme a la <strong>legislación española</strong>, en particular:
+                </p>
+                <ul>
+                    <li>Ley 34/2002, de 11 de noviembre, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE)</li>
+                    <li>Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD)</li>
+                    <li>Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)</li>
+                    <li>Real Decreto Legislativo 1/2007, de 16 de noviembre, para la Defensa de los Consumidores y Usuarios</li>
+                    <li>Real Decreto Legislativo 1/1996, de 12 de abril, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual</li>
+                    <li>Ley 17/2001, de 7 de diciembre, de Marcas</li>
+                    <li>Código Civil Español</li>
+                </ul>
+                
+                <h3>Jurisdicción Competente</h3>
+                <p>
+                    Los usuarios aceptan que cualquier reclamación, demanda, disputa, arbitraje o litigio derivado de:
+                </p>
+                <ul>
+                    <li>El uso de este sitio web</li>
+                    <li>Violación de este Aviso Legal</li>
+                    <li>Solicitudes o pedidos de productos</li>
+                    <li>Protección de datos o privacidad</li>
+                    <li>Daños, perjuicios o incumplimientos contractuales</li>
+                </ul>
+                <p>
+                    Será resuelta por <strong>los Juzgados y Tribunales competentes de Córdoba, España</strong>, 
+                    excepción hecha de los casos donde la ley otorgue fuero especial a consumidores.
+                </p>
+                
+                <h3>Protección de Consumidores</h3>
+                <p>
+                    De conformidad con el Real Decreto Legislativo 1/2007, de 16 de noviembre, para la Defensa de los Consumidores y Usuarios, 
+                    los consumidores conservan sus derechos especiales, incluyendo el fuero de su domicilio cuando así lo establezca la normativa aplicable.
+                </p>
+                
+                <h3>Relaciones Comerciales entre Empresas (B2B)</h3>
+                <p>
+                    Para relaciones comerciales entre empresarios, profesionales y personas jurídicas, las partes se someten expresamente 
+                    a los Juzgados y Tribunales de Córdoba, España, con renuncia a cualquier otro fuero que pudiera corresponderles.
+                </p>
+                
+                <h3>Cumplimiento Normativo</h3>
+                <p>
+                    Marso Distribuciones se compromete expresamente a cumplir:
+                </p>
+                <ul>
+                    <li>Todas las leyes españolas de protección de consumidores</li>
+                    <li>Normativa RGPD y LOPDGDD en tratamiento de datos personales</li>
+                    <li>Requisitos de LSSI-CE para comercio electrónico</li>
+                    <li>Regulaciones específicas sobre distribución de bebidas en cada comunidad autónoma</li>
+                    <li>Restricciones sobre publicidad y venta de bebidas alcohólicas</li>
+                    <li>Leyes de competencia desleal y propiedad intelectual</li>
+                </ul>
+                
+                <div class="info-box">
+                    <strong>⚖️ Cumplimiento Normativo:</strong> Este sitio web se ajusta a la legislación española vigente. 
+                    Si detecta cualquier cuestión legal, contacte a <a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a>
+                </div>
+            </div>
+            
+            <!-- CONTACTO FINAL -->
+            <div class="legal-section">
+                <h2 style="border-bottom: 3px solid var(--color-gold); padding-bottom: 0.75rem;">📞 Contacto para Consultas Legales y Derechos del Usuario</h2>
+                
+                <p>
+                    Si tiene preguntas, inquietudes, desea ejercer derechos RGPD, hacer consultas legales, presentar reclamaciones 
+                    por violación de este Aviso Legal o necesita aclaraciones sobre cualquier aspecto normativo, 
+                    por favor contacte con nosotros a través de:
+                </p>
+                
+                <div class="contact-legal">
+                    <h3>Datos de Contacto</h3>
+                    <div class="contact-data">
+                        <div>
+                            <h4>📧 Correo Electrónico Oficial</h4>
+                            <p><a href="mailto:pedidos@marsodistribuciones.com">pedidos@marsodistribuciones.com</a></p>
+                        </div>
+                        <div>
+                            <h4>📱 Teléfono</h4>
+                            <p><a href="tel:+34635190975">+34 635 19 09 75</a></p>
+                        </div>
+                        <div>
+                            <h4>📍 Domicilio Legal</h4>
+                            <p>Polígono Industrial A-422<br>14270 Hinojosa del Duque<br>Córdoba, España</p>
+                        </div>
+                        <div>
+                            <h4>⏰ Horario de Atención</h4>
+                            <p>Lunes-Viernes: 8:00-18:00<br>Sábados: 9:00-14:00<br>(Hora España)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Plazo de Respuesta</h3>
+                <p>
+                    Nos comprometemos a responder consultas sobre protección de datos en el plazo legal máximo 
+                    establecido en RGPD (30 días naturales, ampliable a 60 en caso de solicitudes complejas).
+                </p>
+            </div>
+            
+
+            <!-- FECHA DE ACTUALIZACIÓN -->
+            <div class="update-date">
+                <strong>Última actualización:</strong> 22 de febrero de 2026<br>
+                <strong>Versión:</strong> 1.0<br>
+                Este documento reemplaza cualquier versión anterior. Se recomienda revisar este aviso legal regularmente.
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="index.html#historia">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+        </div>
+    </footer>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-describedby="cookieBannerDesc">
+        <div class="cookie-banner-content">
+            <p id="cookieBannerDesc">
+                Usamos cookies tecnicas necesarias para el funcionamiento del sitio. Puedes configurar tus preferencias o
+                consultar la <a href="politica-cookies.html">Politica de Cookies</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn cookie-config" id="cookieConfigure">Configurar</button>
+                <button class="cookie-btn cookie-reject" id="cookieReject">Rechazar</button>
+                <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE MODAL ===== -->
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" aria-hidden="true">
+        <div class="cookie-modal-content" role="document">
+            <div class="cookie-modal-header">
+                <h2 id="cookieModalTitle">Preferencias de cookies</h2>
+                <button class="cookie-modal-close" id="cookieClose" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p class="cookie-modal-intro">
+                Puedes aceptar o rechazar categorias no esenciales. Las cookies tecnicas son necesarias y no se pueden desactivar.
+            </p>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies tecnicas (necesarias)</strong>
+                        <p>Permiten el funcionamiento basico del sitio y la gestion de tus preferencias.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies tecnicas necesarias">
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies analiticas</strong>
+                        <p>Nos ayudan a medir el uso del sitio para mejorar el contenido y el rendimiento.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies analiticas">
+                        <input type="checkbox" id="cookieAnalytics">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de marketing</strong>
+                        <p>Permiten mostrar contenido o anuncios relevantes segun tus intereses.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies de marketing">
+                        <input type="checkbox" id="cookieMarketing">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal-actions">
+                <button class="cookie-btn cookie-secondary" id="cookieSave" type="button">Guardar preferencias</button>
+                <button class="cookie-btn cookie-accept" id="cookieAcceptAll" type="button">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

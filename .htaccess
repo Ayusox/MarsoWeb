@@ -1,0 +1,50 @@
+# Compresión GZIP para archivos estáticos
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Caché del navegador - Imágenes
+<FilesMatch "\.(jpg|jpeg|png|gif|ico)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Caché del navegador - CSS y JavaScript
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+# Caché del navegador - Videos
+<FilesMatch "\.(mp4|webm|ogv)$">
+    Header set Cache-Control "max-age=86400, public"
+    Header set Content-Type "video/mp4"
+</FilesMatch>
+
+# Caché del navegador - Fuentes
+<FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Caché del navegador - HTML
+<FilesMatch "\.html$">
+    Header set Cache-Control "max-age=3600, public"
+</FilesMatch>
+
+# Permitir acceso a Cross-Origin para videos
+<FilesMatch "\.(mp4|webm|ogv)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Habilitar E-Tag para mejor caché
+FileETag MTime Size
