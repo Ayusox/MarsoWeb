@@ -1,101 +1,0 @@
-2026
-
-Errores.
-marsodistribuciones.com
-27/01/26
-2
-
-Introducción 
-Optimizar una web va más allá del diseño y el contenido visual. La estructura técnica y la experiencia de usuario juegan un papel clave en el posicionamiento en buscadores y en la conversión.
-En este análisis se han identificado una serie de errores y puntos de mejora que afectan al rendimiento SEO y a la navegación del sitio. Su corrección permitirá mejorar la visibilidad en Google, la experiencia del usuario y el aprovechamiento del contenido existente.
-A continuación, se detallan los principales errores detectados, junto con una breve explicación de su impacto y las recomendaciones para corregirlos.
-
-
-
-Errores de: Metadatos
-Los metadatos (título SEO y meta descripción) son los textos que aparecen en Google cuando se muestra una página en los resultados de búsqueda. Actualmente, algunas páginas no tienen estos elementos optimizados o directamente no los tienen definidos.
-¿Por qué es importante corregirlo?
-Google utiliza los metadatos para entender de qué trata cada página.
-Un buen título y descripción aumentan la probabilidad de que los usuarios hagan clic.
-Mejora la visibilidad y el rendimiento orgánico de la web.
-¿Cómo se corrige?
-Definir un título SEO único para cada página.
-Redactar una meta descripción clara y atractiva, alineada con el contenido.
-Evitar títulos duplicados o genéricos.
-Ajustar la longitud para que se muestre correctamente en Google.
-
-Errores de: Metadatos
-Como podéis ver aquí, falta la meta descripción de la página web que debería tener entre 70-155 caracteres. Y optimizar el título con máximo de 65 caracteres
-Title: Distribución de bebidas Marso al por mayor
-Meta descripción: Marso es tu distribuidor de bebidas alcohólicas, cervezas y refrescos en el Valle de Los Pedroches. Servicio cercano, rápido y profesional para hostelería y eventos.
-
-Errores de: Canonicals
-La etiqueta canonical indica a Google cuál es la versión principal de una página cuando existen URLs similares o duplicadas. En algunos casos, estas etiquetas no están configuradas o no apuntan correctamente.
-¿Por qué es importante corregirlo?
-Evita problemas de contenido duplicado.
-Ayuda a Google a indexar la página correcta.
-Consolida la autoridad SEO en una única URL.
-¿Cómo se corrige?
-Añadir la etiqueta canonical en cada página.
-Asegurarse de que la canonical apunte a la propia URL correcta.
-Revisar que no haya canonicals cruzadas o incorrectas.
-
-Errores de: Canonicals
-Como podéis ver, la url no coincide con la canonical, debería aparecer en ambas la url de https://marsodistribuciones.com
-
-Errores de: Encabezados (H1, H2…)
-Los encabezados (H1, H2, H3…) sirven para estructurar el contenido de una página y ayudar tanto a los usuarios como a Google a entender la información. Actualmente, la web presenta una jerarquía incorrecta de encabezados, con saltos de nivel y varios H1 en una misma página.
-¿Por qué es importante corregirlo?
-Google utiliza los encabezados para interpretar el contenido.
-Una mala estructura dificulta la lectura y comprensión.
-Afecta negativamente al posicionamiento SEO.
-Empeora la experiencia del usuario y la accesibilidad.
-¿Cómo se corrige?
-Usar un único H1 por página, que represente el tema principal.
-Organizar el contenido de forma jerárquica (H1 → H2 → H3).
-Evitar saltos de nivel (no pasar de H1 a H3 o H6).
-Utilizar los encabezados por estructura, no solo por tamaño visual.
-
-Errores de: Encabezados (H1, H2…)
-En el pantallazo podemos observar que la página presenta varios encabezados H1 en una misma URL y que los niveles de encabezado no siguen un orden jerárquico correcto (H1, H2, H3…).
-
-Actualmente se utilizan encabezados H3, H4 y H6 sin una estructura clara, lo que dificulta la comprensión del contenido tanto para los usuarios como para los motores de búsqueda.
-
-Recomendaciones para los Encabezados
-Se recomienda definir un único H1 que represente el mensaje principal de la página y organizar el resto del contenido en niveles coherentes. Ejemplo de estructura recomendada:
-H1 (único en la página): Su distribuidor de bebidas de confianza 
-Usar palabras clave en el H1
-H2 (secciones principales): Sobre nosotros Nuestros servicios de distribución de bebidas (añadimos palabra clave) Nuestros números Ponte en contacto
-H3 (subsecciones y contenido):
-Dentro de “Sobre nosotros”:
-H3: Proveemos servicios de distribución de alimentos y bebidas para restaurantes.
-Dentro de “Nuestros servicios”: Distribución de bebidas Servicio confiable Relación calidad-precio
-Eliminar los encabezados de Sobre nosotros, Links y Contacto del footer.
-(Todos los H6 pasan a H3)
-
-Recomendaciones para los Encabezados
-
--Dentro de “Nuestros números”:
-H3: Años de experiencia
-H3: Clientes contentos
-H3: Pueblos abastecidos
-
-Bloque de llamada a la acción:
-H3: ¿Preparado para dar el salto en tu negocio?
-
-Footer / pie de página eliminar encabezado porque no sirve
-H4: Sobre nosotros
-H4: Links
-H4: Contacto
-
-
-
-Beneficio del cambio:
-
-Una correcta jerarquía de encabezados es clave para que Google y los usuarios entiendan el contenido de la página.
-Google entiende mejor el contenido
-Se refuerza el SEO on-page
-La página gana claridad y estructura
-Mejora accesibilidad y experiencia de usuario
-
-
