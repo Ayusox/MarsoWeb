@@ -40,23 +40,23 @@ MarsoWeb/
 │   ├── Contacta.jpg
 │   ├── Contacta2.jpg
 │   ├── Compromiso.mp4
-│   └── Compromiso-poster.jpg
-└── images_Catalogo/
-    ├── Cerveza.mp4
-    ├── Vino.mp4
-    ├── Refresco.mp4
-    ├── Agua.mp4
-    ├── Cerveza-poster.jpg
-    ├── Vino-poster.jpg
-    ├── Refresco-poster.jpg
-    └── Agua-poster.jpg
+│   ├── Compromiso-poster.jpg
+│   └── catalogo/
+│       ├── Cerveza.mp4
+│       ├── Vino.mp4
+│       ├── Refresco.mp4
+│       ├── Agua.mp4
+│       ├── Cerveza-poster.jpg
+│       ├── Vino-poster.jpg
+│       ├── Refresco-poster.jpg
+│       └── Agua-poster.jpg
 ```
 
 ## Uso
 Abre `index.html` en tu navegador o sirve el proyecto con un servidor local.
 
 ## Personalizacion rapida
-- Cambia imagenes y videos en `images/` e `images_Catalogo/`.
+- Cambia imagenes y videos en `images/` e `images/catalogo/`.
 - Ajusta colores, espaciados y tipografias en `styles.css`.
 - Modifica textos y enlaces en `index.html`.
 
