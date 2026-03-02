@@ -1066,7 +1066,7 @@ video {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.3rem;
     background: linear-gradient(135deg, var(--color-navy-light) 0%, var(--color-navy) 100%);
     color: white;
     text-decoration: none;
@@ -1076,14 +1076,14 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55rem;
+    gap: 0.5rem;
     box-shadow: 0 6px 20px rgba(10, 37, 64, 0.3);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-smooth);
     z-index: 999;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.3px;
 }
 
@@ -1093,8 +1093,8 @@ video {
 }
 
 .call-button svg {
-    width: 19px;
-    height: 19px;
+    width: 18px;
+    height: 18px;
 }
 
 .call-button:hover {

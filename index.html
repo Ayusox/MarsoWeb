@@ -121,7 +121,7 @@
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="100">
                     <div style="position: relative; overflow: hidden;">
                         <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover;">
-                            <source src="images_Catalogo/Cerveza.mp4" type="video/mp4">
+                            <source src="images/catalogo/Cerveza.mp4" type="video/mp4">
                         </video>
                         <div class="catalog-badge">Más Vendido</div>
                     </div>
@@ -139,7 +139,7 @@
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="200">
                     <div style="position: relative; overflow: hidden;">
                         <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: center 40%;">
-                            <source src="images_Catalogo/Vino.mp4" type="video/mp4">
+                            <source src="images/catalogo/Vino.mp4" type="video/mp4">
                         </video>
                         <div class="catalog-badge" style="background: var(--color-amber);">Premium</div>
                     </div>
@@ -157,7 +157,7 @@
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="300">
                     <div style="position: relative; overflow: hidden;">
                         <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 45% 40%;">
-                            <source src="images_Catalogo/Refresco.mp4" type="video/mp4">
+                            <source src="images/catalogo/Refresco.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="catalog-content">
@@ -174,7 +174,7 @@
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="400">
                     <div style="position: relative; overflow: hidden;">
                         <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 60% center;">
-                            <source src="images_Catalogo/Agua.mp4" type="video/mp4">
+                            <source src="images/catalogo/Agua.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="catalog-content">
@@ -466,7 +466,7 @@
                         
                         <button type="submit" class="btn-primary" style="width: 100%;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/>
                             </svg>
                             Enviar Mensaje
                         </button>
@@ -588,21 +588,50 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Bebidas Germán. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+                <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+                <div class="footer-divider"></div>
+                    <div style="margin-top: 0.75rem; margin-bottom: 2.5rem; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 1rem;">
+                            <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:500; margin-right:0.5rem; letter-spacing:0.5px;">¿Necesitas una web?</span>
+                            <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:400; margin-right:0.5rem;">Desarrollado por</span>
+                            <span style="display:inline-block; font-size:1.25rem; font-weight:700;">
+                                <span style="color:#3b82f6;">&lt;</span>
+                                <a href="https://ayusox.github.io/Desarrollo-tu-web/" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:none; transition:color 0.2s;">Ayuso.Dev</a>
+                                <span style="color:#3b82f6;">.&nbsp;/&gt;</span>
+                            </span>
+                        </div>
+                        
         </div>
     </footer>
     
-    <!-- ===== SCROLL TO TOP BUTTON ===== -->
-    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
-        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    <!-- ===== CALL BUTTON ===== -->
+    <a href="tel:+34635190975" class="call-button" id="callButton" aria-label="Llamar">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
         </svg>
-    </button>
+        <span>Llamar</span>
+    </a>
     
     <!-- ===== AOS Library ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!-- ===== Custom JavaScript ===== -->
     <script src="script.js"></script>
+    
+    <!-- ===== Call Button Script ===== -->
+    <script>
+        const callButton = document.getElementById('callButton');
+        const heroSection = document.querySelector('.hero');
+        
+        window.addEventListener('scroll', () => {
+            if (callButton && heroSection) {
+                const heroHeight = heroSection.offsetHeight;
+                if (window.scrollY > heroHeight - 100) {
+                    callButton.classList.add('visible');
+                } else {
+                    callButton.classList.remove('visible');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
