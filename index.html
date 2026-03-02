@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Marso es tu distribuidor de bebidas alcohólicas, cervezas y refrescos en el Valle de Los Pedroches. Servicio cercano, rápido y profesional para hostelería y eventos.">
     <meta name="keywords" content="distribuidora bebidas, mayorista bebidas Córdoba, Hinojosa del Duque, Los Pedroches, cervezas, vinos">
-    <meta name="author" content="Bebidas Germán">
+    <meta name="author" content="Marso Distribuciones">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Distribución de bebidas Marso al por mayor">
@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="Distribución de bebidas Marso al por mayor">
     <meta name="twitter:description" content="Marso es tu distribuidor de bebidas alcohólicas, cervezas y refrescos en el Valle de Los Pedroches. Servicio cercano, rápido y profesional para hostelería y eventos.">
     <meta name="twitter:image" content="https://marsodistribuciones.com/images/logo_redesSociales_og.jpg?v=3">
-    
+
     <title>Distribución de bebidas Marso al por mayor</title>
 
     <!-- Canonical URL -->
@@ -44,6 +44,12 @@
     <!-- AOS - Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" href="images/logo_marso_invert_transparent.png">
+    <link rel="preload" as="image" href="images/frame_video.jpg">
+    <link rel="preload" as="image" href="images/brands-white.png">
+    <link rel="preload" as="image" href="images/Compromiso-poster.jpg">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -54,7 +60,7 @@
         <div class="container nav-container">
             <!-- Logo/Brand -->
             <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="images/logo_marso_invert_transparent.png" alt="Bebidas Germán Logo" class="nav-logo">
+                <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
             </div>
             
             <!-- Desktop Navigation Links -->
@@ -83,7 +89,7 @@
             <div class="hero-content">
                 <!-- Logo Principal -->
                 <div data-aos="fade-down" style="margin-bottom: 2.5rem;">
-                    <img src="images/logo_marso_invert_transparent.png" alt="Marso" class="hero-logo" style="filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4));">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones" class="hero-logo" style="filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4));" loading="eager">
                 </div>
 
                 <h1 class="hero-title" data-aos="fade-up" data-aos-delay="50">
@@ -98,7 +104,7 @@
                 <!-- Colaboradores -->
                 <div data-aos="fade-up" data-aos-delay="150" style="margin-bottom: 2rem;">
                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; font-weight: 500;">Trabajamos con las mejores marcas</p>
-                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="hero-brands" style="opacity: 0.85; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="hero-brands" style="opacity: 0.85; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));" loading="eager">
                 </div>
                 <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;" data-aos="fade-up" data-aos-delay="200">
                     <a href="#catalogo" class="btn-primary">
@@ -132,7 +138,7 @@
                 <!-- Card 1: Cervezas -->
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="100">
                     <div style="position: relative; overflow: hidden;">
-                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover;">
+                        <video autoplay muted loop playsinline class="catalog-image lazy-video" poster="images/catalogo/Cerveza-poster.jpg" preload="metadata" style="width: 100%; height: 280px; object-fit: cover;">
                             <source src="images/catalogo/Cerveza.mp4" type="video/mp4">
                         </video>
                         <div class="catalog-badge">Más Vendido</div>
@@ -150,7 +156,7 @@
                 <!-- Card 2: Vinos -->
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="200">
                     <div style="position: relative; overflow: hidden;">
-                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: center 40%;">
+                        <video autoplay muted loop playsinline class="catalog-image lazy-video" poster="images/catalogo/Vino-poster.jpg" preload="metadata" style="width: 100%; height: 280px; object-fit: cover; object-position: center 40%;">
                             <source src="images/catalogo/Vino.mp4" type="video/mp4">
                         </video>
                         <div class="catalog-badge" style="background: var(--color-amber);">Premium</div>
@@ -168,7 +174,7 @@
                 <!-- Card 3: Refrescos -->
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="300">
                     <div style="position: relative; overflow: hidden;">
-                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 45% 40%;">
+                        <video autoplay muted loop playsinline class="catalog-image lazy-video" poster="images/catalogo/Refresco-poster.jpg" preload="metadata" style="width: 100%; height: 280px; object-fit: cover; object-position: 45% 40%;">
                             <source src="images/catalogo/Refresco.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -185,7 +191,7 @@
                 <!-- Card 4: Aguas -->
                 <div class="catalog-card" data-aos="fade-up" data-aos-delay="400">
                     <div style="position: relative; overflow: hidden;">
-                        <video autoplay muted loop playsinline class="catalog-image" style="width: 100%; height: 280px; object-fit: cover; object-position: 60% center;">
+                        <video autoplay muted loop playsinline class="catalog-image lazy-video" poster="images/catalogo/Agua-poster.jpg" preload="metadata" style="width: 100%; height: 280px; object-fit: cover; object-position: 60% center;">
                             <source src="images/catalogo/Agua.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -203,7 +209,7 @@
     </section>
     
     <!-- ===== HOW IT WORKS SECTION ===== -->
-    <section class="section" id="como-funciona" style="background: linear-gradient(135deg, rgba(10, 37, 64, 0.02) 0%, rgba(212, 175, 55, 0.02) 100%);">
+    <section class="section" id="como-funciona" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
         <div class="container">
             <div style="text-align: center;">
                 <h2 class="section-title" data-aos="fade-up">
@@ -296,7 +302,7 @@
     </section>
     
     <!-- ===== HISTORY SECTION ===== -->
-    <section class="section" id="historia" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
+    <section class="section" id="historia" style="background: white ;">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
                 Sobre Nosotros
@@ -309,7 +315,7 @@
                 <div class="history-text" data-aos="fade-right">
                     <h3>Arraigados en Hinojosa del Duque</h3>
                     <p>
-                        <strong>Bebidas Germán</strong> nació en 1993 con una visión clara: ofrecer a los establecimientos 
+                        <strong>Marso Distribuciones</strong> nació en 1993 con una visión clara: ofrecer a los establecimientos 
                         de Hinojosa del Duque y su comarca un servicio de distribución cercano, fiable y de calidad.
                     </p>
                     <p>
@@ -325,9 +331,10 @@
                 </div>
                 
                 <div class="history-highlight" data-aos="fade-left" style="position: relative;">
-                    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; z-index: -1; border-radius: 12px;">
+                    <video autoplay muted loop playsinline class="lazy-video" preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; z-index: -1; border-radius: 12px;">
                         <source src="images/Compromiso.mp4" type="video/mp4">
                     </video>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/Compromiso-poster.jpg'); background-size: cover; background-position: center 25%; border-radius: 12px; z-index: -2;"></div>
                     <div style="position: relative; z-index: 1;">
                         <h4>Compromiso con Los Pedroches</h4>
                         <p style="margin-bottom: 2rem; opacity: 0.9;">
@@ -341,11 +348,11 @@
                                 <div class="stat-label">Años de experiencia</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">200+</div>
+                                <div class="stat-number">100+</div>
                                 <div class="stat-label">Clientes activos</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">500+</div>
+                                <div class="stat-number">300+</div>
                                 <div class="stat-label">Productos disponibles</div>
                             </div>
                             <div class="stat-item">
@@ -360,7 +367,7 @@
     </section>
 
     <!-- ===== UBICACIÓN SECTION ===== -->
-    <section class="section" id="ubicacion" style="background: white;">
+    <section class="section" id="ubicacion" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Encuéntranos</h2>
             
@@ -377,7 +384,8 @@
                         </div>
                         <div class="info-card-content">
                             <h3>Dirección</h3>
-                            <p>Calle Principal, 45<br>23670 Hinojosa del Duque<br>Córdoba, España</p>
+                            <p><span style="font-weight: 500;">Polígono Industrial</span><br>
+                            <span style="font-size: 0.95em;">A-422, 14270 Hinojosa del Duque, Córdoba</span></p>
                         </div>
                     </div>
                     
@@ -389,8 +397,9 @@
                             </svg>
                         </div>
                         <div class="info-card-content">
-                            <h3>Horarios</h3>
-                            <p>Lunes a Viernes<br>8:00 - 18:00<br>Sábados 9:00 - 14:00</p>
+                            <h3>Horario</h3>
+                            <p><span style="font-weight: 500;">Lunes - Viernes:</span> <span style="font-weight: 500;"> 8:00 - 18:00</span><br>
+                            <span style="font-weight: 500;">Sábados:</span> <span style="font-weight: 500;"> 9:00 - 14:00</span></p>
                         </div>
                     </div>
                     
@@ -402,8 +411,9 @@
                             </svg>
                         </div>
                         <div class="info-card-content">
-                            <h3>Teléfono</h3>
-                            <p>+34 915 234 567<br>pedidos@bebidasgerman.com</p>
+                            <h3>Contacto</h3>
+                            <p><span style="font-size: 1.05em; font-weight: 600;">+34 635 19 09 75</span><br>
+                            <span style="font-size: 0.95em;">pedidos@marsodistribuciones.com</span></p>
                         </div>
                     </div>
                 </div>
@@ -412,7 +422,7 @@
                 <div class="ubicacion-map" data-aos="fade-left">
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.7814256481316!2d-5.125142323459375!3d38.484252671234456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd13543920772a3d%3A0xc59a127ceb06bb87!2sBebidas%20German!5e0!3m2!1ses!2ses!4v1708425600000" 
+                            src="https://www.google.com/maps?q=Marso%20Distribuciones&output=embed" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
@@ -424,7 +434,7 @@
     </section>
 
     <!-- ===== CONTACT SECTION ===== -->
-    <section class="section" id="contacto" style="background: linear-gradient(135deg, rgba(250, 249, 246, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);">
+    <section class="section" id="contacto" style="background: white">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
                 Contacta con Nosotros
@@ -539,7 +549,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos" 
+                    <a href="https://wa.me/34635190975?text=Hola%20Marso%20Distribuciones,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20cat%C3%A1logo.%20Gracias" 
                        target="_blank" 
                        class="whatsapp-btn">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -561,17 +571,17 @@
             <div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="carousel-track" id="carouselTrack">
                     <!-- Imágenes duplicadas para efecto infinito seamless -->
-                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
-                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
-                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
-                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image" loading="lazy">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image" loading="lazy">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image" loading="lazy">
+                    <img src="images/brands-white.png" alt="Marcas colaboradoras" class="carousel-image" loading="lazy">
                 </div>
             </div>
         </div>
         
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>Bebidas Germán</h3>
+                <h3>Marso Distribuciones</h3>
                 <p>
                     Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
                     Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
@@ -591,11 +601,14 @@
             <div class="footer-section">
                 <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Legal</div>
                 <ul class="footer-links">
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Condiciones de Venta</a></li>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
                 </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
             </div>
         </div>
         
@@ -622,6 +635,70 @@
         </svg>
         <span>Llamar</span>
     </a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-describedby="cookieBannerDesc">
+        <div class="cookie-banner-content">
+            <p id="cookieBannerDesc">
+                Usamos cookies tecnicas necesarias para el funcionamiento del sitio. Puedes configurar tus preferencias o
+                consultar la <a href="politica-cookies.html">Politica de Cookies</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn cookie-config" id="cookieConfigure">Configurar</button>
+                <button class="cookie-btn cookie-reject" id="cookieReject">Rechazar</button>
+                <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE MODAL ===== -->
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" aria-hidden="true">
+        <div class="cookie-modal-content" role="document">
+            <div class="cookie-modal-header">
+                <h2 id="cookieModalTitle">Preferencias de cookies</h2>
+                <button class="cookie-modal-close" id="cookieClose" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p class="cookie-modal-intro">
+                Puedes aceptar o rechazar categorias no esenciales. Las cookies tecnicas son necesarias y no se pueden desactivar.
+            </p>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies tecnicas (necesarias)</strong>
+                        <p>Permiten el funcionamiento basico del sitio y la gestion de tus preferencias.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies tecnicas necesarias">
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies analiticas</strong>
+                        <p>Nos ayudan a medir el uso del sitio para mejorar el contenido y el rendimiento.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies analiticas">
+                        <input type="checkbox" id="cookieAnalytics">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de marketing</strong>
+                        <p>Permiten mostrar contenido o anuncios relevantes segun tus intereses.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies de marketing">
+                        <input type="checkbox" id="cookieMarketing">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal-actions">
+                <button class="cookie-btn cookie-secondary" id="cookieSave" type="button">Guardar preferencias</button>
+                <button class="cookie-btn cookie-accept" id="cookieAcceptAll" type="button">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
     
     <!-- ===== AOS Library ===== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

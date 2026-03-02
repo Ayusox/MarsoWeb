@@ -1,11 +1,11 @@
 # SEO README
 
 ## Resumen
-Este documento explica las recomendaciones SEO propuestas para MARSO - Bebidas & Distribución (Bebidas Germán) con foco local en Hinojosa del Duque (Córdoba) y la comarca de Los Pedroches.
+Este documento explica las recomendaciones SEO propuestas para Marso Distribuciones con foco local en Hinojosa del Duque (Córdoba) y la comarca de Los Pedroches.
 
 ## 1) Meta tags estratégicos
 **Title sugerido (≤ 60 caracteres):**
-- MARSO | Distribuidor de bebidas en Hinojosa del Duque
+- Marso Distribuciones | Bebidas en Hinojosa del Duque
 
 **Meta description sugerida (≤ 155 caracteres):**
 - Distribuidor mayorista de bebidas en Hinojosa del Duque, Los Pedroches. Marcas líderes y reparto rápido para hostelería.
@@ -21,7 +21,7 @@ Este documento explica las recomendaciones SEO propuestas para MARSO - Bebidas &
 ## 3) Open Graph (redes sociales)
 **Propuesto:**
 - og:type = website
-- og:title = MARSO - Distribuidor de bebidas en Hinojosa del Duque
+- og:title = Marso Distribuciones - Distribuidor de bebidas en Hinojosa del Duque
 - og:description = Mayorista de bebidas en Los Pedroches...
 - og:url = https://tudominio.com/
 - og:image = https://tudominio.com/images/og-marso.jpg
@@ -54,7 +54,7 @@ Este documento explica las recomendaciones SEO propuestas para MARSO - Bebidas &
 **Recomendaciones:**
 - Alt descriptivo y local en logo del hero y marcas
 - Ejemplos:
-  - “MARSO Bebidas Germán - distribuidor de bebidas en Hinojosa del Duque”
+  - "Marso Distribuciones - distribuidor de bebidas en Hinojosa del Duque"
   - “Marcas distribuidas por MARSO en Los Pedroches”
 
 **Objetivo:** mejorar relevancia local y accesibilidad.
@@ -70,7 +70,7 @@ Este documento explica las recomendaciones SEO propuestas para MARSO - Bebidas &
 
 ## 8) Contenido local (Sobre Nosotros)
 **Párrafo sugerido:**
-“Desde 1993, MARSO (Bebidas Germán) es referente en distribución mayorista en Hinojosa del Duque y la comarca de Los Pedroches, con servicio cercano y marcas líderes.”
+"Desde 1993, Marso Distribuciones es referente en distribución mayorista en Hinojosa del Duque y la comarca de Los Pedroches, con servicio cercano y marcas líderes."
 
 **Objetivo:** reforzar relevancia geográfica.
 
