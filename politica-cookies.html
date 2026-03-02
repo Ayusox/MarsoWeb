@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politica de Cookies de Marso Distribuciones - Informacion sobre el uso de cookies.">
+    <meta name="keywords" content="politica de cookies, cookies, LSSI-CE, Marso Distribuciones">
+    <meta name="author" content="Marso Distribuciones">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Politica de Cookies - Marso Distribuciones">
+    <meta property="og:description" content="Politica de Cookies de Marso Distribuciones">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marsodistribuciones.com/politica-cookies.html">
+
+    <link rel="canonical" href="https://marsodistribuciones.com/politica-cookies.html">
+
+    <title>Politica de Cookies | Marso Distribuciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_marso_invert_transparent.png">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ===== NAVBAR CON FONDO IGUAL AL INDEX.HTML ===== */
+        #navbar {
+            background: rgba(10, 37, 64, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        #navbar.scrolled {
+            background: rgba(10, 37, 64, 0.95) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+        }
+        
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #cookies-hero {
+            animation: heroFadeIn 0.8s ease-out forwards !important;
+            opacity: 0;
+            animation-timing-function: ease-out !important;
+        }
+        
+        #cookies-hero.loaded {
+            opacity: 1 !important;
+            animation: heroFadeIn 0.8s ease-out !important;
+        }
+        
+        .legal-page {
+            min-height: 100vh;
+            background-color: var(--color-off-white);
+        }
+        
+        #cookies-hero {
+            background-color: #0A1620 !important;
+            background-image: 
+                linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)),
+                url('images/frame_video.png'),
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 191, 0, 0.05) 0%, transparent 50%) !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            min-height: auto !important;
+            padding-top: clamp(10rem, 16vw, 14rem) !important;
+            padding-bottom: clamp(6rem, 12vw, 8rem) !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            position: relative !important;
+            margin-top: 0 !important;
+        }
+        
+        #cookies-hero::before {
+            display: none !important;
+        }
+        
+        #cookies-hero .hero-overlay {
+            display: none !important;
+        }
+        
+        #cookies-hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        #cookies-hero .hero-title {
+            font-size: clamp(2rem, 10vw, 4.5rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.15 !important;
+            letter-spacing: -0.5px !important;
+            color: white !important;
+            margin-bottom: 1rem !important;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        #cookies-hero .hero-subtitle {
+            font-size: clamp(0.95rem, 2.5vw, 1.25rem) !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 0 !important;
+            max-width: 95% !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        @media (max-width: 480px) {
+            #cookies-hero .hero-title {
+                font-size: 1.75rem !important;
+                letter-spacing: -0.25px !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            #cookies-hero .hero-subtitle {
+                font-size: 0.9rem !important;
+                letter-spacing: 0.3px !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 640px) {
+            #cookies-hero .hero-title {
+                font-size: 2rem !important;
+                letter-spacing: -0.35px !important;
+            }
+            
+            #cookies-hero .hero-subtitle {
+                font-size: 0.95rem !important;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            #cookies-hero .hero-title {
+                font-size: 2.5rem !important;
+                letter-spacing: -0.4px !important;
+            }
+            
+            #cookies-hero .hero-subtitle {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #cookies-hero .hero-title {
+                font-size: 3.2rem !important;
+            }
+            
+            #cookies-hero .hero-subtitle {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            #cookies-hero .hero-title {
+                font-size: 4rem !important;
+                text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+            }
+            
+            #cookies-hero .hero-subtitle {
+                font-size: 1.2rem !important;
+                text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+            }
+        }
+        
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 480px) {
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .legal-section {
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+            line-height: 1.8;
+        }
+        
+        .legal-section h2 {
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-gold);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section h3 {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            font-weight: 600;
+            color: var(--color-navy-light);
+            margin: 1.25rem 0 0.75rem 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section p {
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section ul {
+            margin: 1rem 0 1rem clamp(1rem, 3vw, 2rem);
+            color: var(--color-text-dark);
+            padding-left: 0;
+        }
+        
+        .legal-section ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .legal-section a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .legal-section a:hover {
+            color: var(--color-gold);
+            border-bottom: 1px solid var(--color-gold);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .info-box strong {
+            color: var(--color-navy);
+        }
+        
+        .table-of-contents {
+            background: white;
+            border: 2px solid var(--color-gray-light);
+            border-radius: 12px;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
+        }
+        
+        .table-of-contents h3 {
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 1rem;
+            margin-top: 0;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+        }
+        
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .table-of-contents li {
+            margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+        }
+        
+        .table-of-contents a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            padding: 0.25rem 0;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+        
+        @media (max-width: 480px) {
+            .table-of-contents {
+                padding: 0.75rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1rem;
+            }
+            
+            .legal-content {
+                padding: 1rem;
+            }
+        }
+        
+        .update-date {
+            background: var(--color-off-white);
+            border-radius: 8px;
+            padding: clamp(0.75rem, 2vw, 1.25rem);
+            margin-top: 2rem;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: var(--color-text-dark);
+            font-style: italic;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo/Brand -->
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo_marso_invert_transparent.png" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catalogo</a>
+                <a href="index.html#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <section class="hero" id="cookies-hero">
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 1; width: 100%; display: flex; align-items: center; padding: 0 clamp(1.5rem, 5vw, 4rem);">
+            <div class="hero-content" style="text-align: left; max-width: 90%; margin: 0;">
+                <h1 class="hero-title" style="text-align: left; margin-bottom: 1rem;">Politica de Cookies</h1>
+                <p class="hero-subtitle" style="text-align: left; margin-left: 0; margin-right: auto; max-width: 90%; margin-bottom: 0;">
+                    Informacion sobre el uso de cookies en el sitio web de Marso Distribuciones
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="legal-page">
+        <div class="legal-content">
+            
+            <!-- Tabla de Contenidos -->
+            <div class="table-of-contents">
+                <h3>Indice de Contenidos</h3>
+                <ul>
+                    <li><a href="#que-son">1. Que son las cookies</a></li>
+                    <li><a href="#tipos">2. Tipos de cookies</a></li>
+                    <li><a href="#cookies-utilizadas">3. Cookies utilizadas en este sitio</a></li>
+                    <li><a href="#gestion">4. Gestion y retirada del consentimiento</a></li>
+                    <li><a href="#terceros">5. Cookies de terceros</a></li>
+                    <li><a href="#actualizaciones">6. Actualizaciones de la politica</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-section" id="que-son">
+                <h2>1. Que son las cookies</h2>
+                <p>
+                    Las cookies son pequenos archivos de texto que un sitio web puede guardar en su dispositivo cuando lo visita.
+                    Sirven para que el sitio recuerde su actividad o preferencias y para mejorar la experiencia de navegacion.
+                </p>
+                <p>
+                    El uso de cookies se regula por el articulo 22.2 de la Ley 34/2002 (LSSI-CE). El tratamiento de datos personales
+                    que pueda derivarse del uso de cookies se realiza conforme al Reglamento (UE) 2016/679 (RGPD).
+                </p>
+            </div>
+            
+            <div class="legal-section" id="tipos">
+                <h2>2. Tipos de cookies</h2>
+                <p>En funcion de su finalidad, las cookies pueden ser:</p>
+                <ul>
+                    <li><strong>Cookies tecnicas:</strong> necesarias para el funcionamiento basico del sitio y la gestion de preferencias.</li>
+                    <li><strong>Cookies de personalizacion:</strong> permiten recordar opciones del usuario.</li>
+                    <li><strong>Cookies analiticas:</strong> ayudan a medir la actividad del sitio y mejorar el rendimiento.</li>
+                    <li><strong>Cookies publicitarias:</strong> gestionan la publicidad mostrada segun habitos de navegacion.</li>
+                </ul>
+                <p>En funcion de su duracion, pueden ser de sesion o persistentes.</p>
+            </div>
+            
+            <div class="legal-section" id="cookies-utilizadas">
+                <h2>3. Cookies utilizadas en este sitio</h2>
+                <p>
+                    Este sitio utiliza unicamente cookies tecnicas necesarias para el funcionamiento del sitio y la gestion del consentimiento.
+                    Su instalacion se basa en la necesidad de prestar el servicio solicitado por el usuario. No se instalan cookies analiticas
+                    ni publicitarias sin consentimiento previo.
+                </p>
+                <ul>
+                    <li><strong>cookie_consent</strong> - Cookie tecnica para guardar la eleccion del usuario sobre cookies. Duracion: 365 dias.</li>
+                </ul>
+                <p>
+                    Cualquier cookie no tecnica requerira el consentimiento previo, expreso e informado del usuario, conforme al articulo 22.2
+                    de la LSSI-CE y a los requisitos del RGPD.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="gestion">
+                <h2>4. Gestion y retirada del consentimiento</h2>
+                <p>
+                    Puede aceptar, rechazar o configurar las cookies desde el banner o el panel de preferencias disponible de forma permanente
+                    en el sitio web. El consentimiento se obtiene conforme al RGPD y puede retirarse en cualquier momento.
+                </p>
+                <p>
+                    Revocar el consentimiento sera tan sencillo como otorgarlo, bastando con ajustar la configuracion desde el panel o eliminar
+                    la cookie de consentimiento desde su navegador para que el banner vuelva a mostrarse.
+                </p>
+                <div class="info-box">
+                    <strong>Como borrar cookies:</strong> Consulte la ayuda de su navegador (Chrome, Firefox, Safari, Edge) para eliminar o bloquear cookies.
+                </div>
+            </div>
+            
+            <div class="legal-section" id="terceros">
+                <h2>5. Cookies de terceros</h2>
+                <p>
+                    Actualmente no se instalan cookies de terceros. Si en el futuro se incorporan servicios que impliquen cookies de terceros,
+                    se informara previamente y no se instalaran hasta contar con el consentimiento previo del usuario.
+                </p>
+            </div>
+            
+            <div class="legal-section" id="actualizaciones">
+                <h2>6. Actualizaciones de la politica</h2>
+                <p>
+                    Marso Distribuciones puede actualizar esta Politica de Cookies para reflejar cambios legales o tecnicos.
+                    Las modificaciones se publicaran en esta pagina y seran efectivas desde su publicacion.
+                </p>
+            </div>
+            
+            <div class="update-date">
+                <strong>Ultima actualizacion:</strong> 23 de febrero de 2026<br>
+                <strong>Version:</strong> 1.0<br>
+                Este documento reemplaza cualquier version anterior. Se recomienda revisarlo regularmente.
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993. 
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rapidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catalogo</a></li>
+                    <li><a href="index.html#historia">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Politica de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Cordoba</p>
+        </div>
+    </footer>
+    
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-describedby="cookieBannerDesc">
+        <div class="cookie-banner-content">
+            <p id="cookieBannerDesc">
+                Usamos cookies tecnicas necesarias para el funcionamiento del sitio. Puedes configurar tus preferencias o
+                consultar la <a href="politica-cookies.html">Politica de Cookies</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn cookie-config" id="cookieConfigure">Configurar</button>
+                <button class="cookie-btn cookie-reject" id="cookieReject">Rechazar</button>
+                <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE MODAL ===== -->
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" aria-hidden="true">
+        <div class="cookie-modal-content" role="document">
+            <div class="cookie-modal-header">
+                <h2 id="cookieModalTitle">Preferencias de cookies</h2>
+                <button class="cookie-modal-close" id="cookieClose" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p class="cookie-modal-intro">
+                Puedes aceptar o rechazar categorias no esenciales. Las cookies tecnicas son necesarias y no se pueden desactivar.
+            </p>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies tecnicas (necesarias)</strong>
+                        <p>Permiten el funcionamiento basico del sitio y la gestion de tus preferencias.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies tecnicas necesarias">
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies analiticas</strong>
+                        <p>Nos ayudan a medir el uso del sitio para mejorar el contenido y el rendimiento.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies analiticas">
+                        <input type="checkbox" id="cookieAnalytics">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de marketing</strong>
+                        <p>Permiten mostrar contenido o anuncios relevantes segun tus intereses.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies de marketing">
+                        <input type="checkbox" id="cookieMarketing">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal-actions">
+                <button class="cookie-btn cookie-secondary" id="cookieSave" type="button">Guardar preferencias</button>
+                <button class="cookie-btn cookie-accept" id="cookieAcceptAll" type="button">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
