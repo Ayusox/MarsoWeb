@@ -1151,6 +1151,7 @@ video {
         font-size: 0.8rem;
     }
 
+
     .catalog-badge {
         font-size: 0.68rem;
         padding: 0.28rem 0.75rem;
@@ -1177,6 +1178,7 @@ video {
         box-shadow: 0 6px 20px rgba(10, 37, 64, 0.3);
     }
 }
+
 
 /* ===== COOKIE BANNER ===== */
 .cookie-banner {
