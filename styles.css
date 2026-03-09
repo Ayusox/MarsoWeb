@@ -152,7 +152,7 @@ video {
 .hero {
     min-height: 100vh;
     background-color: #1A2A3A;
-    background-image: url('images/frame_video.jpg');
+    background-image: url('images/frame_video.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -578,7 +578,7 @@ video {
 }
 
 .contact-info {
-    background: linear-gradient(135deg, rgba(10, 37, 64, 0.82) 0%, rgba(10, 37, 64, 0.78) 100%), url('images/Contacta.jpg');
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.82) 0%, rgba(10, 37, 64, 0.78) 100%), url('images/Contacta.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
