@@ -1,0 +1,28 @@
+{
+  "name": "marsoweb",
+  "version": "1.0.0",
+  "description": "Landing page corporativa para **Marso Distribuciones**, distribuidor mayorista de bebidas en Hinojosa del Duque (Cordoba). El sitio esta construido con HTML5, CSS3 y JavaScript vanilla, con enfoque en diseno premium, rendimiento y experiencia de usuario.",
+  "main": "script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayusox/MarsoWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ayusox/MarsoWeb/issues"
+  },
+  "homepage": "https://github.com/Ayusox/MarsoWeb#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
