@@ -1,6 +1,6 @@
 {
   "name": "marsoweb",
-  "version": "0.4.dev",
+  "version": "0.4.1",
   "description": "Landing page corporativa para **Marso Distribuciones**, distribuidor mayorista de bebidas en Hinojosa del Duque (Cordoba). El sitio esta construido con HTML5, CSS3 y JavaScript vanilla, con enfoque en diseno premium, rendimiento y experiencia de usuario.",
   "main": "script.js",
   "directories": {
