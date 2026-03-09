@@ -1,57 +1,50 @@
 // ===== MARSO DISTRIBUCIONES - JAVASCRIPT =====
 // Este archivo controla los pequeños efectos y la interacción de la web.
 
-// ===== Animaciones al hacer scroll (AOS) =====
-// Activa las animaciones de entrada cuando el usuario baja por la página.
-if (window.AOS) {
-    AOS.init({
-        duration: 800, // Duración de la animación (ms)
-        easing: 'ease-out-cubic', // Tipo de movimiento
-        once: true, // Solo anima una vez
-        offset: 100 // Distancia antes de activar la animación
+// ===== Animaciones nativas al hacer scroll (IntersectionObserver) =====
+const animatedEls = document.querySelectorAll('[data-aos]');
+const aosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('aos-visible');
+            aosObserver.unobserve(entry.target);
+        }
     });
-}
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+animatedEls.forEach(el => aosObserver.observe(el));
 
 // ===== Barra de navegación al hacer scroll =====
 // Añade un fondo a la navbar cuando se baja un poco.
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
+function updateNavbar() {
         // Cambia el fondo de la navbar al hacer scroll
         if (navbar) {
             if (window.scrollY > 100) {
-                // Agrega la clase 'scrolled' cuando se desplaza más de 100px
                 navbar.classList.add('scrolled');
             } else {
-                // Elimina la clase cuando se vuelve a la parte superior
                 navbar.classList.remove('scrolled');
             }
         }
 
         // Marca el enlace activo según la sección visible
-        // Recorre todas las secciones de la página que tengan un atributo id
         let current = '';
         const sections = document.querySelectorAll('section[id]');
-        // Determina cuál es la sección actual basándose en la posición del scroll
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // Detecta la sección 200px antes de que llegue al inicio de la ventana
             if (scrollY >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
 
-        // Actualiza los enlaces de navegación para marcar el activo
         navLinks.forEach(link => {
             link.classList.remove('active');
-            // Compara el href del enlace con el id de la sección actual
-            // slice(1) elimina el '#' del principio del href
             if (link.getAttribute('href').slice(1) === current) {
                 link.classList.add('active');
             }
         });
-});
+}
 
 // ===== Menú móvil =====
 // Abre y cierra el menú cuando se pulsa el botón hamburguesa.
@@ -113,19 +106,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const callButton = document.getElementById('callButton');
 const heroSection = document.querySelector('.hero');
 
-window.addEventListener('scroll', () => {
-    // Solo ejecuta si el botón y el hero existen en la página
+function updateCallButton() {
     if (callButton && heroSection) {
-        // Obtiene la altura total del hero
         const heroHeight = heroSection.offsetHeight;
-        // Muestra el botón cuando se ha pasado casi toda la altura del hero
         if (window.scrollY > heroHeight - 100) {
             callButton.classList.add('visible');
         } else {
             callButton.classList.remove('visible');
         }
     }
-});
+}
+
+// ===== Throttled scroll handler =====
+(function() {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateNavbar();
+                updateCallButton();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+})();
 
 // ===== Formulario de contacto =====
 // Gestiona el envío del formulario (actualmente sin backend, solo confirmación al usuario)
@@ -252,11 +257,7 @@ if ('IntersectionObserver' in window) {
             }
         });
     }, {
-        // rootMargin: carga el video 300px antes de que sea visible en pantalla
-        // Esto da tiempo para que comience la descarga antes de que el usuario lo vea
-        rootMargin: '300px',
-        // threshold: detecta varios puntos de intersección
-        // 0: cuando comienza a entrar, 0.25: cuando está 25% visible
+        rootMargin: navigator.connection?.effectiveType === '4g' ? '200px' : '50px',
         threshold: [0, 0.25]
     });
 
@@ -603,3 +604,11 @@ window.addEventListener('load', () => {
         hero.style.opacity = '1';
     }
 });
+
+// ===== Pausar carrusel cuando no es visible =====
+const carouselTrack = document.querySelector('.carousel-track');
+if (carouselTrack) {
+    new IntersectionObserver(([entry]) => {
+        carouselTrack.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+    }).observe(carouselTrack);
+}
