@@ -1,0 +1,411 @@
+/* ===== CATALOGO DE VINOS - PAGE-SPECIFIC STYLES ===== */
+/* Extends styles.css — relies on its CSS variables and base components */
+
+/* ===== NAVBAR: opaque from load (no full-viewport hero) ===== */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.97) !important;
+    box-shadow: var(--shadow-medium);
+}
+
+/* ===== HERO ===== */
+.catalogo-hero {
+    min-height: 40vh;
+    background-color: #0A2540;
+    background-image: url('images/catalogo/Vino-poster.webp');
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(6rem, 12vh, 8rem) 0 clamp(2.5rem, 5vh, 4rem);
+}
+
+.catalogo-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 37, 64, 0.55) 0%,
+        rgba(10, 37, 64, 0.80) 60%,
+        rgba(10, 37, 64, 0.95) 100%
+    );
+}
+
+.catalogo-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.catalogo-hero__eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+}
+
+.catalogo-hero__title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.catalogo-hero__subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+/* ===== MAIN CATALOG SECTION ===== */
+#catalogo {
+    padding: clamp(2rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
+    background: var(--color-off-white);
+}
+
+/* ===== OCCASION TABS ===== */
+.ocasion-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.ocasion-tab {
+    padding: 0.55rem 1.25rem;
+    border-radius: 50px;
+    border: 2px solid var(--color-gray-light);
+    background: white;
+    color: var(--color-text-dark);
+    font-family: var(--font-primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.ocasion-tab:hover {
+    border-color: var(--color-navy);
+    color: var(--color-navy);
+    background: rgba(10, 37, 64, 0.05);
+}
+
+.ocasion-tab--active {
+    background: var(--color-navy);
+    border-color: var(--color-navy);
+    color: white;
+    box-shadow: 0 4px 14px rgba(10, 37, 64, 0.25);
+}
+
+/* ===== CATALOG COUNT ===== */
+.catalogo-count {
+    font-size: 0.9rem;
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.catalogo-count strong {
+    color: var(--color-navy);
+}
+
+/* ===== CAROUSEL WRAPPER ===== */
+.vino-carousel-wrapper {
+    position: relative;
+}
+
+.vino-carousel {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.vino-carousel__track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* ===== WINE CARDS ===== */
+.vino-card {
+    flex-shrink: 0;
+    min-width: calc((100% - 3rem) / 3);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardEnter 0.4s ease both;
+}
+
+.vino-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card visual area */
+.vino-card__visual {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 4rem;
+    user-select: none;
+}
+
+/* Type badge */
+.vino-card__tipo-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.badge--tinto    { background: #7B1D2E; }
+.badge--blanco   { background: #B8860B; }
+.badge--rosado   { background: #C96480; }
+.badge--espumoso { background: #1A5276; }
+
+/* Card body */
+.vino-card__body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.vino-card__do {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.35rem;
+}
+
+.vino-card__nombre {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.vino-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.vino-tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    background: rgba(10, 37, 64, 0.07);
+    color: var(--color-navy);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.vino-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.25rem;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    font-family: var(--font-primary);
+    font-size: 0.88rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    width: 100%;
+    justify-content: center;
+    box-shadow: var(--shadow-gold);
+}
+
+.vino-card__cta:hover {
+    background: var(--color-amber);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ===== ARROWS ===== */
+.vino-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-gray-light);
+    color: var(--color-navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    z-index: 10;
+}
+
+.vino-carousel__arrow:hover:not(:disabled) {
+    background: var(--color-navy);
+    color: white;
+    border-color: var(--color-navy);
+    box-shadow: var(--shadow-medium);
+}
+
+.vino-carousel__arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.arrow--prev {
+    left: -22px;
+}
+
+.arrow--next {
+    right: -22px;
+}
+
+/* ===== DOTS ===== */
+.vino-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+}
+
+.vino-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-gray-light);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition-smooth);
+}
+
+.vino-dot--active {
+    background: var(--color-gold);
+    transform: scale(1.3);
+}
+
+/* ===== EMPTY STATE ===== */
+.catalogo-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6B7280;
+}
+
+.catalogo-empty__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.catalogo-empty__text {
+    font-size: 1.05rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===== CTA SECTION ===== */
+.catalogo-cta {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    text-align: center;
+}
+
+.catalogo-cta__title {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.catalogo-cta__subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalogo-cta__actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1023px) {
+    .vino-card {
+        min-width: calc((100% - 1.5rem) / 2);
+    }
+
+    .arrow--prev { left: -16px; }
+    .arrow--next { right: -16px; }
+}
+
+@media (max-width: 639px) {
+    .vino-card {
+        min-width: 100%;
+    }
+
+    .vino-carousel__arrow {
+        display: none;
+    }
+
+    .catalogo-hero {
+        min-height: 35vh;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .ocasion-tab {
+        font-size: 0.82rem;
+        padding: 0.45rem 0.9rem;
+    }
+}

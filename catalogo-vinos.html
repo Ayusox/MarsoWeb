@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo interactivo de vinos Marso Distribuciones. Navega por ocasión y encuentra el vino perfecto para cada momento: aperitivo, cena romántica, celebración, maridaje y más.">
+    <meta name="keywords" content="vinos, catálogo vinos, vinos Córdoba, Marso distribuciones, Montilla-Moriles, Rioja, Ribera del Duero, vinos ocasión">
+    <meta name="author" content="Marso Distribuciones">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Catálogo de Vinos — Marso Distribuciones">
+    <meta property="og:description" content="Encuentra el vino ideal para cada ocasión. Selección premium de vinos D.O. disponibles en Hinojosa del Duque y comarca.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marsodistribuciones.com/catalogo-vinos.html">
+    <meta property="og:image" content="https://marsodistribuciones.com/images/logo_redesSociales_og.webp?v=3">
+    <meta property="og:locale" content="es_ES">
+
+    <title>Catálogo de Vinos — Marso Distribuciones</title>
+
+    <link rel="canonical" href="https://marsodistribuciones.com/catalogo-vinos.html">
+    <link rel="icon" type="image/webp" href="images/logo_marso_invert_transparent.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="images/catalogo/Vino-poster.webp">
+    <link rel="preload" as="image" href="images/logo_marso_invert_transparent.webp">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalogo-vinos.css">
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html">
+                    <img src="images/logo_marso_invert_transparent.webp" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                <a href="index.html#historia" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="catalogo-hero">
+        <div class="container catalogo-hero__content">
+            <p class="catalogo-hero__eyebrow">Marso Distribuciones</p>
+            <h1 class="catalogo-hero__title">Vinos para cada<br>momento especial</h1>
+            <p class="catalogo-hero__subtitle">Descubre nuestra selección de vinos D.O. agrupados por ocasión. Filtra por el momento y encuentra el vino perfecto.</p>
+        </div>
+    </section>
+
+    <!-- ===== CATALOG ===== -->
+    <main id="catalogo">
+        <div class="container">
+
+            <!-- Occasion tabs -->
+            <nav id="ocasionTabs" class="ocasion-tabs" role="tablist" aria-label="Filtrar por ocasión"></nav>
+
+            <!-- Count -->
+            <p id="catalogoCount" class="catalogo-count" aria-live="polite"></p>
+
+            <!-- Carousel -->
+            <div class="vino-carousel-wrapper">
+                <button class="vino-carousel__arrow arrow--prev" id="prevBtn" aria-label="Anterior" disabled>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+
+                <div class="vino-carousel" role="region" aria-label="Catálogo de vinos">
+                    <div class="vino-carousel__track" id="vinoTrack"></div>
+                </div>
+
+                <button class="vino-carousel__arrow arrow--next" id="nextBtn" aria-label="Siguiente">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dots -->
+            <div class="vino-dots" id="vinoDots" role="navigation" aria-label="Páginas del catálogo"></div>
+
+            <!-- Empty state -->
+            <div class="catalogo-empty hidden" id="catalogoEmpty">
+                <div class="catalogo-empty__icon">🍷</div>
+                <p class="catalogo-empty__text">No hay vinos disponibles para esta ocasión todavía.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="catalogo-cta">
+        <div class="container">
+            <h2 class="catalogo-cta__title">¿Te ha gustado alguno?</h2>
+            <p class="catalogo-cta__subtitle">Solicita información de precios y disponibilidad. Te atendemos directamente por WhatsApp o por email.</p>
+            <div class="catalogo-cta__actions">
+                <a href="https://wa.me/34635190975?text=Hola%20Marso%20Distribuciones%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20vuestro%20cat%C3%A1logo%20de%20vinos." target="_blank" rel="noopener" class="btn-primary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Contactar por WhatsApp
+                </a>
+                <a href="index.html#contacto" class="btn-secondary">
+                    Enviar consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993.
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Enlaces Rápidos</div>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="index.html#historia">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+                <button class="cookie-settings-button" id="cookieSettings" type="button" aria-haspopup="dialog" aria-controls="cookieModal">
+                    Configurar cookies
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+            <div class="footer-divider"></div>
+            <div style="margin-top: 0.75rem; margin-bottom: 2.5rem; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 1rem;">
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:500; margin-right:0.5rem; letter-spacing:0.5px;">¿Necesitas una web?</span>
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:400; margin-right:0.5rem;">Desarrollado por</span>
+                <span style="display:inline-block; font-size:1.25rem; font-weight:700;">
+                    <span style="color:#3b82f6;">&lt;</span>
+                    <a href="https://ayusox.github.io/Desarrollo-tu-web/" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:none; transition:color 0.2s;">Ayuso.Dev</a>
+                    <span style="color:#3b82f6;">.&nbsp;/&gt;</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== CALL BUTTON ===== -->
+    <a href="tel:+34635190975" class="call-button" id="callButton" aria-label="Llamar">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+        </svg>
+        <span>Llamar</span>
+    </a>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-describedby="cookieBannerDesc">
+        <div class="cookie-banner-content">
+            <p id="cookieBannerDesc">
+                Usamos cookies tecnicas necesarias para el funcionamiento del sitio. Puedes configurar tus preferencias o
+                consultar la <a href="politica-cookies.html">Politica de Cookies</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn cookie-config" id="cookieConfigure">Configurar</button>
+                <button class="cookie-btn cookie-reject" id="cookieReject">Rechazar</button>
+                <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COOKIE MODAL ===== -->
+    <div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" aria-hidden="true">
+        <div class="cookie-modal-content" role="document">
+            <div class="cookie-modal-header">
+                <h2 id="cookieModalTitle">Preferencias de cookies</h2>
+                <button class="cookie-modal-close" id="cookieClose" type="button" aria-label="Cerrar">&times;</button>
+            </div>
+            <p class="cookie-modal-intro">
+                Puedes aceptar o rechazar categorias no esenciales. Las cookies tecnicas son necesarias y no se pueden desactivar.
+            </p>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies tecnicas (necesarias)</strong>
+                        <p>Permiten el funcionamiento basico del sitio y la gestion de tus preferencias.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies tecnicas necesarias">
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies analiticas</strong>
+                        <p>Nos ayudan a medir el uso del sitio para mejorar el contenido y el rendimiento.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies analiticas">
+                        <input type="checkbox" id="cookieAnalytics">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de marketing</strong>
+                        <p>Permiten mostrar contenido o anuncios relevantes segun tus intereses.</p>
+                    </div>
+                    <label class="cookie-toggle" aria-label="Cookies de marketing">
+                        <input type="checkbox" id="cookieMarketing">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-modal-actions">
+                <button class="cookie-btn cookie-secondary" id="cookieSave" type="button">Guardar preferencias</button>
+                <button class="cookie-btn cookie-accept" id="cookieAcceptAll" type="button">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="catalogo-vinos.js" defer></script>
+</body>
+</html>
