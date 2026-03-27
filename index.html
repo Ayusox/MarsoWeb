@@ -48,6 +48,102 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="dist/output.css">
 
+    <!-- Structured Data: Organization + LocalBusiness + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "LocalBusiness", "WholesaleStore"],
+          "@id": "https://marsodistribuciones.com/#organization",
+          "name": "Marso Distribuciones",
+          "url": "https://marsodistribuciones.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://marsodistribuciones.com/images/logo_redesSociales_og.webp",
+            "width": 1200,
+            "height": 630
+          },
+          "image": "https://marsodistribuciones.com/images/logo_redesSociales_og.webp",
+          "description": "Mayorista de bebidas en el Valle de Los Pedroches desde 1993. Distribuimos cervezas, vinos, licores, refrescos y aguas minerales a bares, restaurantes y comercios.",
+          "foundingDate": "1993",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Polígono Industrial A-422",
+            "addressLocality": "Hinojosa del Duque",
+            "postalCode": "14270",
+            "addressRegion": "Córdoba",
+            "addressCountry": "ES"
+          },
+          "telephone": "+34635190975",
+          "email": "pedidos@marsodistribuciones.com",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34635190975",
+            "email": "pedidos@marsodistribuciones.com",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Valle de Los Pedroches, Córdoba"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Catálogo de Bebidas al por Mayor",
+            "itemListElement": [
+              {
+                "@type": "OfferCatalog",
+                "name": "Cervezas",
+                "description": "Cervezas nacionales e importadas en lata, botella y barril"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Vinos y Licores",
+                "description": "Vinos D.O. Montilla-Moriles, cavas y licores premium"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Refrescos",
+                "description": "Coca-Cola, Pepsi, Fanta, Kas y bebidas energéticas"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Aguas Minerales",
+                "description": "Aguas naturales y con gas, formatos de 33cl a 5L"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://marsodistribuciones.com/#website",
+          "url": "https://marsodistribuciones.com/",
+          "name": "Marso Distribuciones",
+          "description": "Mayorista de bebidas al por mayor en el Valle de Los Pedroches",
+          "publisher": {
+            "@id": "https://marsodistribuciones.com/#organization"
+          },
+          "inLanguage": "es-ES"
+        }
+      ]
+    }
+    </script>
+
     <!-- Google Analytics & AdSense -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE1XWD3J2C"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608388491200814" crossorigin="anonymous"></script>
