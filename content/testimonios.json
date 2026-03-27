@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Carlos Mérida",
+    "empresa": "Bar El Rincón",
+    "cargo": "Propietario",
+    "texto": "Llevamos más de diez años trabajando con Marso y nunca nos han fallado. Siempre puntuales, el género llega en perfecto estado y cuando hay algún problema lo resuelven en el día. Para nosotros son parte del negocio.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "María José Cabrera",
+    "empresa": "Restaurante La Dehesa",
+    "cargo": "Gerente",
+    "texto": "La variedad de vinos y cervezas que manejan es impresionante para ser una distribuidora local. Además, el trato es cercano y siempre te asesoran bien. Muy recomendable para cualquier establecimiento de la zona.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Paco Ortega",
+    "empresa": "Cafetería Central",
+    "cargo": "Dueño",
+    "texto": "Llevo años con ellos y no cambiaría. El precio es competitivo, la atención es excelente y el reparto es fiable. En temporada alta, cuando más los necesitas, nunca te dejan sin género.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Ana Ruiz",
+    "empresa": "Supermercados Pedroches",
+    "cargo": "Directora de Compras",
+    "texto": "Para nuestros tres locales, Marso es el distribuidor de referencia en bebidas. Gestión de pedidos sencilla, buena comunicación y sin sorpresas en la factura. Todo lo que necesitas de un proveedor.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Jesús Morales",
+    "empresa": "Coto de los Pedroches",
+    "cargo": "Encargado de Eventos",
+    "texto": "Organizamos varios eventos al año y siempre contamos con Marso para la bebida. Se adaptan a la cantidad, nos dan buenas condiciones y el servicio es impecable. Los recomiendo sin dudarlo.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Lucía Fernández",
+    "empresa": "Tapería La Encina",
+    "cargo": "Socia Fundadora",
+    "texto": "Cuando abrimos la tapería hace tres años, Marso fue el primer proveedor que elegimos y seguimos con ellos. Profesionalidad, variedad y ese trato de pueblo que tanto se agradece. Son 10.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Manuel Polo",
+    "empresa": "Hotel Sierra Norte",
+    "cargo": "Director de F&B",
+    "texto": "Para el hotel necesitamos un proveedor de confianza que sepa adaptarse a nuestras necesidades. Marso cumple con creces: rapidez, calidad y flexibilidad. Sin duda los mejor distribuidora de la comarca.",
+    "estrellas": 5
+  },
+  {
+    "nombre": "Carmen Valverde",
+    "empresa": "Club Deportivo Hinojosa",
+    "cargo": "Presidenta",
+    "texto": "Llevamos años contando con Marso para nuestras celebraciones y torneos. Siempre responden rápido, los precios son justos y el servicio es de primera. Un lujo tener una empresa así en el pueblo.",
+    "estrellas": 5
+  }
+]

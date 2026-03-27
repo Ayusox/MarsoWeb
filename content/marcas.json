@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Mahou",
+    "descripcion": "Cerveza líder en España. Clásica 5 estrellas, San Miguel, Alhambra y variedades especiales.",
+    "categoria": "Cervezas"
+  },
+  {
+    "nombre": "Cruzcampo",
+    "descripcion": "El sabor de Andalucía. Lager fresca y ligera, perfecta para la hostelería del sur.",
+    "categoria": "Cervezas"
+  },
+  {
+    "nombre": "Heineken",
+    "descripcion": "Cerveza premium internacional de gran reconocimiento. Disponible en barril, botella y lata.",
+    "categoria": "Cervezas"
+  },
+  {
+    "nombre": "Estrella Damm",
+    "descripcion": "Cerveza mediterránea con carácter propio. Estrella Damm, Voll-Damm y Estrella Libre.",
+    "categoria": "Cervezas"
+  },
+  {
+    "nombre": "Montilla-Moriles D.O.",
+    "descripcion": "Selección de vinos de la Denominación de Origen más cercana. Fino, Amontillado, Oloroso y Pedro Ximénez.",
+    "categoria": "Vinos"
+  },
+  {
+    "nombre": "Rioja Alta",
+    "descripcion": "Vinos con Denominación de Origen Calificada Rioja. Crianza, Reserva y Gran Reserva de alta calidad.",
+    "categoria": "Vinos"
+  },
+  {
+    "nombre": "Freixenet",
+    "descripcion": "Cava y espumosos españoles de referencia. Cordon Negro, Carta Nevada y variedades premium.",
+    "categoria": "Vinos"
+  },
+  {
+    "nombre": "Coca-Cola",
+    "descripcion": "El refresco más reconocido del mundo. Coca-Cola, Zero, Zero Zero y sabores en todos los formatos.",
+    "categoria": "Refrescos"
+  },
+  {
+    "nombre": "Pepsi",
+    "descripcion": "Pepsi, Pepsi Max y variedades. Disponible en lata, botella PET y vidrio.",
+    "categoria": "Refrescos"
+  },
+  {
+    "nombre": "Font Vella",
+    "descripcion": "Agua mineral natural de alta calidad. Disponible en formatos desde 33 cl hasta garrafas de 5 L.",
+    "categoria": "Aguas"
+  },
+  {
+    "nombre": "Aquarius",
+    "descripcion": "Bebida isotónica refrescante en sabores limón y naranja. Muy demandada en hostelería y eventos deportivos.",
+    "categoria": "Refrescos"
+  },
+  {
+    "nombre": "Red Bull",
+    "descripcion": "La bebida energética de referencia mundial. Clásica y variedades sin azúcar en lata de 25 cl.",
+    "categoria": "Otras"
+  }
+]

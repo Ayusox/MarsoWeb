@@ -1,0 +1,39 @@
+{
+  "intro": "Marso Distribuciones es la empresa de referencia en distribución de bebidas en el Valle de Los Pedroches. Desde 1993, servimos a bares, restaurantes, hoteles y comercios de la comarca con un catálogo amplio, precios competitivos y un servicio de entrega que no falla.",
+  "historia": {
+    "titulo": "Arraigados en Los Pedroches desde 1993",
+    "parrafos": [
+      "Todo empezó con un pequeño almacén familiar en Hinojosa del Duque. La idea era simple: ofrecer a los establecimientos locales un distribuidor cercano, con el que pudieran hablar de tú a tú, que conociera sus necesidades y respondiera con agilidad.",
+      "Más de treinta años después, seguimos siendo esa empresa cercana, pero con la capacidad y el catálogo de un distribuidor moderno. Hemos crecido junto a nuestros clientes, incorporando nuevas marcas, mejorando la logística y ampliando el área de cobertura sin perder jamás el trato personalizado que nos define.",
+      "Hoy, Marso Distribuciones es 100% local, con un equipo comprometido con la comarca, una flota propia de reparto y relaciones directas con los principales fabricantes y distribuidores nacionales."
+    ]
+  },
+  "valores": [
+    {
+      "icono": "🤝",
+      "titulo": "Trato Cercano",
+      "descripcion": "Cada cliente es una persona, no un número de factura. Nos importa tu negocio y trabajamos para que crezcas con nosotros."
+    },
+    {
+      "icono": "⚡",
+      "titulo": "Rapidez y Fiabilidad",
+      "descripcion": "Entregas en 24 horas garantizadas. Sabemos que en hostelería el tiempo vale dinero y no podemos fallar."
+    },
+    {
+      "icono": "🏆",
+      "titulo": "Calidad sin Compromiso",
+      "descripcion": "Solo trabajamos con marcas de confianza. Control de temperatura, fechas y estado del producto en cada entrega."
+    },
+    {
+      "icono": "📍",
+      "titulo": "Compromiso Local",
+      "descripcion": "Somos de aquí, para los de aquí. Apoyamos el comercio y la hostelería de Los Pedroches porque es nuestra comunidad."
+    }
+  ],
+  "estadisticas": [
+    { "numero": "30+", "etiqueta": "Años de experiencia" },
+    { "numero": "100+", "etiqueta": "Clientes activos" },
+    { "numero": "300+", "etiqueta": "Productos disponibles" },
+    { "numero": "24h", "etiqueta": "Servicio de entrega" }
+  ]
+}

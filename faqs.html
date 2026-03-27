@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preguntas frecuentes sobre Marso Distribuciones - pedidos, entregas, zonas de reparto y más.">
+    <meta name="keywords" content="preguntas frecuentes, FAQ, Marso Distribuciones, distribuidora bebidas, Los Pedroches">
+    <meta name="author" content="Marso Distribuciones">
+
+    <meta property="og:title" content="FAQs | Marso Distribuciones">
+    <meta property="og:description" content="Resolvemos tus dudas sobre pedidos, entregas y nuestros productos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marsodistribuciones.com/faqs.html">
+
+    <link rel="canonical" href="https://marsodistribuciones.com/faqs.html">
+    <title>Preguntas Frecuentes | Marso Distribuciones</title>
+
+    <link rel="icon" type="image/webp" href="images/logo_marso_invert_transparent.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #navbar {
+            background: rgba(10, 37, 64, 0.92) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .page-hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-title span {
+            color: var(--color-gold);
+        }
+
+        .page-hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-section {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-gray-light);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid var(--color-gray-light);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-family: var(--font-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--color-gold);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--color-navy);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            line-height: 1;
+            transition: background 0.2s ease, transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--color-gold);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.5rem;
+            color: var(--color-text-dark);
+            line-height: 1.8;
+            font-size: 0.98rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-loading, .faq-error {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-navy);
+            font-size: 1rem;
+        }
+
+        .faq-error {
+            color: #e53e3e;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html">
+                    <img src="images/logo_marso_invert_transparent.webp" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Preguntas <span>Frecuentes</span></h1>
+            <p class="page-hero-subtitle">Resolvemos tus dudas sobre pedidos, entregas, marcas y nuestro servicio.</p>
+        </div>
+    </section>
+
+    <!-- ===== FAQ CONTENT ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-list" id="faqList">
+                <p class="faq-loading">Cargando preguntas...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993.
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Enlaces Rápidos</div>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="marcas.html">Marcas</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+            <div class="footer-divider"></div>
+            <div style="margin-top: 0.75rem; margin-bottom: 2.5rem; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 1rem;">
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:500; margin-right:0.5rem; letter-spacing:0.5px;">¿Necesitas una web?</span>
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:400; margin-right:0.5rem;">Desarrollado por</span>
+                <span style="display:inline-block; font-size:1.25rem; font-weight:700;">
+                    <span style="color:#3b82f6;">&lt;</span>
+                    <a href="https://ayusox.github.io/Desarrollo-tu-web/" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:none;">Ayuso.Dev</a>
+                    <span style="color:#3b82f6;">.&nbsp;/&gt;</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        fetch('content/faqs.json')
+            .then(r => r.json())
+            .then(data => renderFAQs(data))
+            .catch(() => {
+                document.getElementById('faqList').innerHTML =
+                    '<p class="faq-error">No se pudieron cargar las preguntas. Por favor, inténtalo más tarde.</p>';
+            });
+
+        function renderFAQs(faqs) {
+            const list = document.getElementById('faqList');
+            list.innerHTML = faqs.map((faq, i) => `
+                <div class="faq-item" id="faq-${i}">
+                    <button class="faq-question" aria-expanded="false" aria-controls="answer-${i}" onclick="toggleFAQ(${i})">
+                        <span>${faq.pregunta}</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="answer-${i}" role="region">
+                        <div class="faq-answer-inner">${faq.respuesta}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleFAQ(index) {
+            const item = document.getElementById('faq-' + index);
+            const btn = item.querySelector('.faq-question');
+            const isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-item.open').forEach(el => {
+                el.classList.remove('open');
+                el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('nav-open');
+            });
+        }
+    </script>
+</body>
+</html>
