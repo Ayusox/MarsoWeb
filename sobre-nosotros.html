@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia de Marso Distribuciones — más de 30 años distribuyendo bebidas en el Valle de Los Pedroches, Córdoba.">
+    <meta name="keywords" content="sobre nosotros, historia, Marso Distribuciones, distribuidora bebidas, Hinojosa del Duque">
+    <meta name="author" content="Marso Distribuciones">
+
+    <meta property="og:title" content="Sobre Nosotros | Marso Distribuciones">
+    <meta property="og:description" content="Más de 30 años distribuyendo bebidas en Los Pedroches. Conoce nuestra historia, valores y equipo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marsodistribuciones.com/sobre-nosotros.html">
+
+    <link rel="canonical" href="https://marsodistribuciones.com/sobre-nosotros.html">
+    <title>Sobre Nosotros | Marso Distribuciones</title>
+
+    <link rel="icon" type="image/webp" href="images/logo_marso_invert_transparent.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #navbar {
+            background: rgba(10, 37, 64, 0.92) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .page-hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-title span { color: var(--color-gold); }
+
+        .page-hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== INTRO ===== */
+        .about-intro {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+
+        .about-intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--color-text-dark);
+        }
+
+        /* ===== HISTORIA ===== */
+        .about-historia {
+            padding: var(--section-padding) 0;
+            background: var(--color-off-white);
+        }
+
+        .about-historia .section-title {
+            text-align: left;
+        }
+
+        .historia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .historia-parrafos p {
+            margin-bottom: 1.25rem;
+            line-height: 1.9;
+            color: var(--color-text-dark);
+        }
+
+        .historia-parrafos p:last-child { margin-bottom: 0; }
+
+        .about-stats-bar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-block {
+            background: var(--color-navy);
+            border-radius: var(--border-radius);
+            padding: 1.75rem;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-block-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            line-height: 1;
+        }
+
+        .stat-block-label {
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== VALORES ===== */
+        .about-valores {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: var(--color-off-white);
+            border-radius: var(--border-radius);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-top: 3px solid var(--color-gold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .value-desc {
+            font-size: 0.9rem;
+            color: #6B7280;
+            line-height: 1.7;
+        }
+
+        .about-loading, .about-error {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-navy);
+        }
+
+        .about-error { color: #e53e3e; }
+
+        @media (max-width: 1024px) {
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .historia-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .values-grid { grid-template-columns: 1fr; }
+            .about-stats-bar { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html">
+                    <img src="images/logo_marso_invert_transparent.webp" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                <a href="sobre-nosotros.html" class="nav-link active">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Sobre <span>Nosotros</span></h1>
+            <p class="page-hero-subtitle">Más de treinta años distribuyendo bebidas en el Valle de Los Pedroches con cercanía y profesionalidad.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTENT (loaded from JSON) ===== -->
+    <div id="aboutContent">
+        <section class="about-intro">
+            <div class="container">
+                <p class="about-loading">Cargando...</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993.
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Enlaces Rápidos</div>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="marcas.html">Marcas</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+            <div class="footer-divider"></div>
+            <div style="margin-top: 0.75rem; margin-bottom: 2.5rem; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 1rem;">
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:500; margin-right:0.5rem; letter-spacing:0.5px;">¿Necesitas una web?</span>
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:400; margin-right:0.5rem;">Desarrollado por</span>
+                <span style="display:inline-block; font-size:1.25rem; font-weight:700;">
+                    <span style="color:#3b82f6;">&lt;</span>
+                    <a href="https://ayusox.github.io/Desarrollo-tu-web/" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:none;">Ayuso.Dev</a>
+                    <span style="color:#3b82f6;">.&nbsp;/&gt;</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        fetch('content/sobre-nosotros.json')
+            .then(r => r.json())
+            .then(data => renderAbout(data))
+            .catch(() => {
+                document.getElementById('aboutContent').innerHTML =
+                    '<section class="about-intro"><div class="container"><p class="about-error">No se pudo cargar el contenido. Por favor, inténtalo más tarde.</p></div></section>';
+            });
+
+        function renderAbout(data) {
+            const statsHTML = data.estadisticas.map(s => `
+                <div class="stat-block">
+                    <div class="stat-block-number">${s.numero}</div>
+                    <div class="stat-block-label">${s.etiqueta}</div>
+                </div>
+            `).join('');
+
+            const valoresHTML = data.valores.map(v => `
+                <div class="value-card">
+                    <span class="value-icon">${v.icono}</span>
+                    <div class="value-title">${v.titulo}</div>
+                    <p class="value-desc">${v.descripcion}</p>
+                </div>
+            `).join('');
+
+            const parrafosHTML = data.historia.parrafos.map(p => `<p>${p}</p>`).join('');
+
+            document.getElementById('aboutContent').innerHTML = `
+                <section class="about-intro">
+                    <div class="container">
+                        <p class="about-intro-text">${data.intro}</p>
+                    </div>
+                </section>
+
+                <section class="about-historia">
+                    <div class="container">
+                        <h2 class="section-title">${data.historia.titulo}</h2>
+                        <div class="historia-grid">
+                            <div class="historia-parrafos">
+                                ${parrafosHTML}
+                            </div>
+                            <div class="about-stats-bar">
+                                ${statsHTML}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about-valores">
+                    <div class="container">
+                        <h2 class="section-title" style="text-align:center;">Nuestros Valores</h2>
+                        <p class="section-subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">Los principios que guían cada entrega y cada relación con nuestros clientes.</p>
+                        <div class="values-grid">
+                            ${valoresHTML}
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinksEl = document.getElementById('navLinks');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinksEl.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marcas que distribuye Marso Distribuciones — cervezas, vinos, refrescos y aguas en el Valle de Los Pedroches.">
+    <meta name="keywords" content="marcas, cervezas, vinos, refrescos, Marso Distribuciones, distribuidora bebidas">
+    <meta name="author" content="Marso Distribuciones">
+
+    <meta property="og:title" content="Nuestras Marcas | Marso Distribuciones">
+    <meta property="og:description" content="Descubre todas las marcas que distribuimos en el Valle de Los Pedroches.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marsodistribuciones.com/marcas.html">
+
+    <link rel="canonical" href="https://marsodistribuciones.com/marcas.html">
+    <title>Nuestras Marcas | Marso Distribuciones</title>
+
+    <link rel="icon" type="image/webp" href="images/logo_marso_invert_transparent.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #navbar {
+            background: rgba(10, 37, 64, 0.92) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .page-hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-title span { color: var(--color-gold); }
+
+        .page-hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== BRANDS SECTION ===== */
+        .brands-section {
+            padding: var(--section-padding) 0;
+            background: var(--color-off-white);
+        }
+
+        /* ===== CATEGORY FILTER ===== */
+        .brand-category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 999px;
+            border: 2px solid var(--color-navy);
+            background: transparent;
+            color: var(--color-navy);
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-navy);
+            color: white;
+        }
+
+        /* ===== BRANDS GRID ===== */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .brand-card[hidden] { display: none; }
+
+        .brand-category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+
+        .badge-Cervezas   { background: #FEF3C7; color: #92400E; }
+        .badge-Vinos      { background: #FCE7F3; color: #9D174D; }
+        .badge-Refrescos  { background: #DBEAFE; color: #1E40AF; }
+        .badge-Aguas      { background: #D1FAE5; color: #065F46; }
+        .badge-Otras      { background: #F3F4F6; color: #374151; }
+
+        .brand-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+
+        .brand-desc {
+            font-size: 0.88rem;
+            color: #6B7280;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .brands-loading, .brands-error {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-navy);
+            grid-column: 1 / -1;
+        }
+
+        .brands-error { color: #e53e3e; }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #6B7280;
+            grid-column: 1 / -1;
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .brands-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .brands-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <a href="index.html">
+                    <img src="images/logo_marso_invert_transparent.webp" alt="Marso Distribuciones Logo" class="nav-logo" loading="eager">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks" style="display: flex; gap: 2.5rem;">
+                <a href="index.html#inicio" class="nav-link">Inicio</a>
+                <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Nuestras <span>Marcas</span></h1>
+            <p class="page-hero-subtitle">Trabajamos con las mejores marcas del mercado para que tu negocio tenga siempre lo que necesita.</p>
+        </div>
+    </section>
+
+    <!-- ===== BRANDS CONTENT ===== -->
+    <section class="brands-section">
+        <div class="container">
+            <!-- Category filters — rendered by JS once data loads -->
+            <div class="brand-category-filter" id="filterBar"></div>
+
+            <div class="brands-grid" id="brandsGrid">
+                <p class="brands-loading">Cargando marcas...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Marso Distribuciones</h3>
+                <p>
+                    Tu distribuidor de confianza en Hinojosa del Duque desde 1993.
+                    Calidad, variedad y servicio personalizado para tu negocio en la comarca de Los Pedroches.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Enlaces Rápidos</div>
+                <ul class="footer-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="marcas.html">Marcas</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <div style="font-weight: 600; margin-bottom: 1rem; color: white;">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="condiciones-venta.html">Condiciones de Venta</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marso Distribuciones. Todos los derechos reservados. | Hinojosa del Duque, Córdoba</p>
+            <div class="footer-divider"></div>
+            <div style="margin-top: 0.75rem; margin-bottom: 2.5rem; text-align: center; font-family: 'Montserrat', sans-serif; padding: 0 1rem;">
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:500; margin-right:0.5rem; letter-spacing:0.5px;">¿Necesitas una web?</span>
+                <span style="display:inline-block; font-size:1.05rem; color:#fff; font-weight:400; margin-right:0.5rem;">Desarrollado por</span>
+                <span style="display:inline-block; font-size:1.25rem; font-weight:700;">
+                    <span style="color:#3b82f6;">&lt;</span>
+                    <a href="https://ayusox.github.io/Desarrollo-tu-web/" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:none;">Ayuso.Dev</a>
+                    <span style="color:#3b82f6;">.&nbsp;/&gt;</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        let allBrands = [];
+        let activeFilter = 'Todas';
+
+        fetch('content/marcas.json')
+            .then(r => r.json())
+            .then(data => {
+                allBrands = data;
+                buildFilterBar(data);
+                renderBrands(data);
+            })
+            .catch(() => {
+                document.getElementById('brandsGrid').innerHTML =
+                    '<p class="brands-error">No se pudieron cargar las marcas. Por favor, inténtalo más tarde.</p>';
+            });
+
+        function buildFilterBar(brands) {
+            const categories = ['Todas', ...new Set(brands.map(b => b.categoria))];
+            const bar = document.getElementById('filterBar');
+            bar.innerHTML = categories.map(cat => `
+                <button class="filter-btn ${cat === 'Todas' ? 'active' : ''}"
+                        data-category="${cat}"
+                        onclick="setFilter('${cat}')">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function setFilter(category) {
+            activeFilter = category;
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.category === category);
+            });
+
+            // Show/hide cards
+            const cards = document.querySelectorAll('.brand-card');
+            cards.forEach(card => {
+                const match = category === 'Todas' || card.dataset.category === category;
+                card.hidden = !match;
+            });
+        }
+
+        function renderBrands(brands) {
+            const grid = document.getElementById('brandsGrid');
+            grid.innerHTML = brands.map(b => `
+                <article class="brand-card" data-category="${b.categoria}">
+                    <span class="brand-category-badge badge-${b.categoria}">${b.categoria}</span>
+                    <div class="brand-name">${b.nombre}</div>
+                    <p class="brand-desc">${b.descripcion}</p>
+                </article>
+            `).join('');
+        }
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinksEl = document.getElementById('navLinks');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinksEl.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
